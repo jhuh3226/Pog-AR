@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="case6" size="10.000000 5.625000" />
+    <ImageTarget name="case5" size="10.000000 5.595000" />
+    <ImageTarget name="case4" size="10.000000 5.602587" />
+    <ImageTarget name="case3" size="10.000000 5.620224" />
+    <ImageTarget name="case2Target" size="10.000000 5.609756" />
+    <ImageTarget name="qrCode" size="10.000000 10.000000" />
+    <ImageTarget name="appLogo" size="10.000000 10.000000" />
+    <ImageTarget name="reOn" size="10.000000 10.000000" />
+    <ImageTarget name="animal1" size="20.000000 20.108500" />
+    <ImageTarget name="target1" size="10.000000 5.609756" />
+    <ImageTarget name="book" size="0.270000 0.392577" />
+  </Tracking>
+</QCARConfig>

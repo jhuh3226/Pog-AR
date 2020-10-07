@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 0d55d5358493c4d18b683e5292e22c31
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 01
+    100002: 02
+    100004: bangku
+    100006: bus
+    100008: //RootNode
+    100010: BUS_BODY
+    100012: BUS_FRWHEEL
+    100014: BUS_INTERIOR
+    100016: BUS_RWHEELS
+    100018: pintu depan
+    100020: tangga
+    400000: 01
+    400002: 02
+    400004: bangku
+    400006: bus
+    400008: //RootNode
+    400010: BUS_BODY
+    400012: BUS_FRWHEEL
+    400014: BUS_INTERIOR
+    400016: BUS_RWHEELS
+    400018: pintu depan
+    400020: tangga
+    2100000: Red Plastic Body Trim
+    2100002: Headlights
+    2100004: Indicator Lights
+    2100006: License Plate (Back of Vehicle)
+    2100008: Not Used
+    2100010: Truck Trailer - Side
+    2100012: Truck Trailer - Rear
+    2100014: Truck Trailer - Front
+    2100016: Vehicle Underside
+    2100018: Standard_2
+    2300000: 01
+    2300002: 02
+    2300004: bangku
+    2300006: BUS_BODY
+    2300008: BUS_FRWHEEL
+    2300010: BUS_INTERIOR
+    2300012: BUS_RWHEELS
+    2300014: pintu depan
+    2300016: tangga
+    3300000: 01
+    3300002: 02
+    3300004: bangku
+    3300006: BUS_BODY
+    3300008: BUS_FRWHEEL
+    3300010: BUS_INTERIOR
+    3300012: BUS_RWHEELS
+    3300014: pintu depan
+    3300016: tangga
+    4300000: BUS_BODY
+    4300002: BUS_RWHEELS
+    4300004: BUS_INTERIOR
+    4300006: BUS_FRWHEEL
+    4300008: 01
+    4300010: 02
+    4300012: pintu depan
+    4300014: tangga
+    4300016: bangku
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Headlights
+    second: {fileID: 2100000, guid: ca60f7149e6914f7790f1aba34ec343f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Indicator Lights
+    second: {fileID: 2100000, guid: 939a001a3f1aa41a9b8938202f343e7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: License Plate (Back of Vehicle)
+    second: {fileID: 2100000, guid: 6bf7e064d481d426cb4313c5c11299e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Not Used
+    second: {fileID: 2100000, guid: bd7a4b291fe4e4ae08fd8fd0771a30ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Plastic Body Trim
+    second: {fileID: 2100000, guid: 149c4c78ea7204f778ae61e373de17da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_2
+    second: {fileID: 2100000, guid: 045dd46d4635a49028120f88270c217d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Truck Trailer - Front
+    second: {fileID: 2100000, guid: 1a1e51410a4904fb2ba6750207749156, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Truck Trailer - Rear
+    second: {fileID: 2100000, guid: 1c9e94819848c4668ba0e7f5fd28cd3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Truck Trailer - Side
+    second: {fileID: 2100000, guid: 4f62b586d36d2489181fb8958f9430c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle Underside
+    second: {fileID: 2100000, guid: 5e2ec3a65a72b4473b0d6dc62b268ed0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

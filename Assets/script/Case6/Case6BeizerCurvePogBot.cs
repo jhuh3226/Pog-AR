@@ -20,6 +20,9 @@ public class Case6BeizerCurvePogBot : MonoBehaviour
     public bool pogBotPassedPoint2;
     public bool pogBotPassedPoint3;
 
+    public float lastPointTime;
+    bool recorded = false;
+
     private void Start()
     {
         routeToGo = 0;
@@ -77,6 +80,12 @@ public class Case6BeizerCurvePogBot : MonoBehaviour
             if (transform.localPosition.x > p3.x)
             {
                 pogBotPassedPoint3 = true;
+
+                if (recorded == false)
+                {
+                    lastPointTime = Time.fixedTime;
+                    recorded = !recorded;
+                }
             }
 
             //if passed p3, then stop the pogBot, and start new pogBot with errors pointing

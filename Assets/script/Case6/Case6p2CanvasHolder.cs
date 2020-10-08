@@ -9,11 +9,19 @@ public class Case6p2CanvasHolder : MonoBehaviour
 
     public GameObject CV1;
     public GameObject CV2;
+    public GameObject CV3;
+    public GameObject CVMissionClear;
 
     public GameObject CVArrow1;
     public GameObject ArrowImage;
 
     public GameObject car;
+    public GameObject pogBot;
+
+    public GameObject gameObCase6BeizerCurvePogBot;
+
+    //bool to animate
+    public bool startAnimating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +39,32 @@ public class Case6p2CanvasHolder : MonoBehaviour
         CVArrow1.GetComponent<Canvas>().enabled = true;
         ArrowImage.GetComponent<Case6p2MoveArrow>().enabled = true;
 
-        //
+        //if two seconds passed after the pogBotReaches the last point, activate CV3
+        Case6BeizerCurvePogBot case6BeizerCurvePogBot = gameObCase6BeizerCurvePogBot.GetComponent<Case6BeizerCurvePogBot>();
+        if (case6BeizerCurvePogBot.pogBotPassedPoint3)
+        {
+            if(Time.fixedTime - case6BeizerCurvePogBot.lastPointTime > 2)
+            {
+                //disable
+                CV2.SetActive(false);
+
+                //enable
+                CV3.GetComponent<Canvas>().enabled = true;
+            }
+        }
+
+        //if two seconds passed after activating CV3, activate comission complete
+        if(case6BeizerCurvePogBot.pogBotPassedPoint3)
+        {
+            if(Time.fixedTime - case6BeizerCurvePogBot.lastPointTime > 4)
+            {
+                //disable
+                CV3.SetActive(false);
+
+                //enable
+                CVMissionClear.GetComponent<Canvas>().enabled = true;
+            }
+        }
     }
 
     void TaskOnClick1()
@@ -43,11 +76,14 @@ public class Case6p2CanvasHolder : MonoBehaviour
 
         //turn on cv2
         CV2.GetComponent<Canvas>().enabled = true;
-        //arrowLeftImage.GetComponent<Case4Blink>().enabled = true;
 
-        //CVArrowLeftText.GetComponent<Canvas>().enabled = true;
+        //turn head animation
+        startAnimating = true;
 
-        ////bool sending to case5p2AnimationHolder
-        //startAnimating = true;
+        //move the van by turning on the beizercurve script
+        car.GetComponent<Case6BeizerCurveCar>().enabled = true;
+
+        //move the pogbot by turning on the beizercurve script
+        pogBot.GetComponent<Case6BeizerCurvePogBot>().enabled = true;
     }
 }

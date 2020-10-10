@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Case8.unity
     guid: 088e2520414464c14992f2230907e50d
+  - enabled: 1
+    path: Assets/Scenes/Case9.unity
+    guid: a2141c10528d04f91a3f93b06e45a06c
+  - enabled: 1
+    path: Assets/Scenes/Case9-2.unity
+    guid: a48472c4a804c4bf9826c2e05f3b2bec
   m_configObjects: {}

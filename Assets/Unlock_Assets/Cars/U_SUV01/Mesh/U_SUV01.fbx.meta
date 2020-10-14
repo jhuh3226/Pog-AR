@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 4e48d63c1bd7f864d9d4c7dc9d4d3938
+timeCreated: 1519152229
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ilum
+    100002: interior_HI
+    100004: Needles
+    100006: SteeringWheel
+    100008: //RootNode
+    100010: U_SUV01_brakeLights
+    100012: U_SUV01_caliper_FL
+    100014: U_SUV01_caliper_FR
+    100016: U_SUV01_caliper_RL
+    100018: U_SUV01_caliper_RR
+    100020: U_SUV01_carbon02
+    100022: U_SUV01_carbonfiber
+    100024: U_SUV01_carDetails
+    100026: U_SUV01_carPaint
+    100028: U_SUV01_chrome
+    100030: U_SUV01_chrome_SW
+    100032: U_SUV01_collider
+    100034: U_SUV01_frontLights
+    100036: U_SUV01_gauges
+    100038: U_SUV01_gauges_SW
+    100040: U_SUV01_glassLight
+    100042: U_SUV01_grille_SW
+    100044: U_SUV01_hazardLight
+    100046: U_SUV01_interiorDetails
+    100048: U_SUV01_Leather
+    100050: U_SUV01_leather_02
+    100052: U_SUV01_Leather_02_SW
+    100054: U_SUV01_Leather_SW
+    100056: U_SUV01_lightDetails
+    100058: U_SUV01_lights
+    100060: U_SUV01_mirror
+    100062: U_SUV01_plasticPanel
+    100064: U_SUV01_positionLights
+    100066: U_SUV01_reverseLights
+    100068: U_SUV01_rotor_FL
+    100070: U_SUV01_rotor_FR
+    100072: U_SUV01_rotor_RL
+    100074: U_SUV01_rotor_RR
+    100076: U_SUV01_rpmNeedle
+    100078: U_SUV01_seam
+    100080: U_SUV01_seam_SW
+    100082: U_SUV01_seatLeather
+    100084: U_SUV01_seatLeather_02
+    100086: U_SUV01_speedNeedle
+    100088: U_SUV01_tire_FL
+    100090: U_SUV01_tire_FR
+    100092: U_SUV01_tire_RL
+    100094: U_SUV01_tire_RR
+    100096: U_SUV01_transpIcons
+    100098: U_SUV01_transpIcons_SW
+    100100: U_SUV01_wheel_FL
+    100102: U_SUV01_wheel_FL 1
+    100104: U_SUV01_wheel_FR
+    100106: U_SUV01_wheel_FR 1
+    100108: U_SUV01_wheel_RL
+    100110: U_SUV01_wheel_RL 1
+    100112: U_SUV01_wheel_RR
+    100114: U_SUV01_wheel_RR 1
+    100116: U_SUV01_windows
+    100118: wheels
+    400000: Ilum
+    400002: interior_HI
+    400004: Needles
+    400006: SteeringWheel
+    400008: //RootNode
+    400010: U_SUV01_brakeLights
+    400012: U_SUV01_caliper_FL
+    400014: U_SUV01_caliper_FR
+    400016: U_SUV01_caliper_RL
+    400018: U_SUV01_caliper_RR
+    400020: U_SUV01_carbon02
+    400022: U_SUV01_carbonfiber
+    400024: U_SUV01_carDetails
+    400026: U_SUV01_carPaint
+    400028: U_SUV01_chrome
+    400030: U_SUV01_chrome_SW
+    400032: U_SUV01_collider
+    400034: U_SUV01_frontLights
+    400036: U_SUV01_gauges
+    400038: U_SUV01_gauges_SW
+    400040: U_SUV01_glassLight
+    400042: U_SUV01_grille_SW
+    400044: U_SUV01_hazardLight
+    400046: U_SUV01_interiorDetails
+    400048: U_SUV01_Leather
+    400050: U_SUV01_leather_02
+    400052: U_SUV01_Leather_02_SW
+    400054: U_SUV01_Leather_SW
+    400056: U_SUV01_lightDetails
+    400058: U_SUV01_lights
+    400060: U_SUV01_mirror
+    400062: U_SUV01_plasticPanel
+    400064: U_SUV01_positionLights
+    400066: U_SUV01_reverseLights
+    400068: U_SUV01_rotor_FL
+    400070: U_SUV01_rotor_FR
+    400072: U_SUV01_rotor_RL
+    400074: U_SUV01_rotor_RR
+    400076: U_SUV01_rpmNeedle
+    400078: U_SUV01_seam
+    400080: U_SUV01_seam_SW
+    400082: U_SUV01_seatLeather
+    400084: U_SUV01_seatLeather_02
+    400086: U_SUV01_speedNeedle
+    400088: U_SUV01_tire_FL
+    400090: U_SUV01_tire_FR
+    400092: U_SUV01_tire_RL
+    400094: U_SUV01_tire_RR
+    400096: U_SUV01_transpIcons
+    400098: U_SUV01_transpIcons_SW
+    400100: U_SUV01_wheel_FL
+    400102: U_SUV01_wheel_FL 1
+    400104: U_SUV01_wheel_FR
+    400106: U_SUV01_wheel_FR 1
+    400108: U_SUV01_wheel_RL
+    400110: U_SUV01_wheel_RL 1
+    400112: U_SUV01_wheel_RR
+    400114: U_SUV01_wheel_RR 1
+    400116: U_SUV01_windows
+    400118: wheels
+    2100000: U_SUV01_window_shdr
+    2100002: U_SUV01_carPaint_shdr
+    2100004: U_SUV01_lightGlass_shdr
+    2100006: U_SUV01_carDetails_shdr
+    2100008: U_SUV01_lights_shdr
+    2100010: U_SUV01_wheel_shdr
+    2100012: U_SUV01_wheels_Details_shdr
+    2100014: U_SUV01_transpIcons_shdr
+    2100016: U_SUV01_Leather_shdr
+    2100018: U_SUV01_steeringWheel_leather_shdr
+    2100020: U_SUV01_chrome_shdr
+    2100022: U_SUV01_gauges_shdr
+    2100024: U_SUV01_carbonfiber_shdr
+    2100026: U_SUV01_carbon02_shdr
+    2100028: U_SUV01_plasticPanel_shdr
+    2100030: U_SUV01_mirror_shdr
+    2300000: U_SUV01_brakeLights
+    2300002: U_SUV01_caliper_FL
+    2300004: U_SUV01_caliper_FR
+    2300006: U_SUV01_caliper_RL
+    2300008: U_SUV01_caliper_RR
+    2300010: U_SUV01_carbon02
+    2300012: U_SUV01_carbonfiber
+    2300014: U_SUV01_carDetails
+    2300016: U_SUV01_carPaint
+    2300018: U_SUV01_chrome
+    2300020: U_SUV01_chrome_SW
+    2300022: U_SUV01_collider
+    2300024: U_SUV01_frontLights
+    2300026: U_SUV01_gauges
+    2300028: U_SUV01_gauges_SW
+    2300030: U_SUV01_glassLight
+    2300032: U_SUV01_grille_SW
+    2300034: U_SUV01_hazardLight
+    2300036: U_SUV01_interiorDetails
+    2300038: U_SUV01_Leather
+    2300040: U_SUV01_leather_02
+    2300042: U_SUV01_Leather_02_SW
+    2300044: U_SUV01_Leather_SW
+    2300046: U_SUV01_lightDetails
+    2300048: U_SUV01_lights
+    2300050: U_SUV01_mirror
+    2300052: U_SUV01_plasticPanel
+    2300054: U_SUV01_positionLights
+    2300056: U_SUV01_reverseLights
+    2300058: U_SUV01_rotor_FL
+    2300060: U_SUV01_rotor_FR
+    2300062: U_SUV01_rotor_RL
+    2300064: U_SUV01_rotor_RR
+    2300066: U_SUV01_rpmNeedle
+    2300068: U_SUV01_seam
+    2300070: U_SUV01_seam_SW
+    2300072: U_SUV01_seatLeather
+    2300074: U_SUV01_seatLeather_02
+    2300076: U_SUV01_speedNeedle
+    2300078: U_SUV01_tire_FL
+    2300080: U_SUV01_tire_FR
+    2300082: U_SUV01_tire_RL
+    2300084: U_SUV01_tire_RR
+    2300086: U_SUV01_transpIcons
+    2300088: U_SUV01_transpIcons_SW
+    2300090: U_SUV01_wheel_FL 1
+    2300092: U_SUV01_wheel_FR 1
+    2300094: U_SUV01_wheel_RL 1
+    2300096: U_SUV01_wheel_RR 1
+    2300098: U_SUV01_windows
+    3300000: U_SUV01_brakeLights
+    3300002: U_SUV01_caliper_FL
+    3300004: U_SUV01_caliper_FR
+    3300006: U_SUV01_caliper_RL
+    3300008: U_SUV01_caliper_RR
+    3300010: U_SUV01_carbon02
+    3300012: U_SUV01_carbonfiber
+    3300014: U_SUV01_carDetails
+    3300016: U_SUV01_carPaint
+    3300018: U_SUV01_chrome
+    3300020: U_SUV01_chrome_SW
+    3300022: U_SUV01_collider
+    3300024: U_SUV01_frontLights
+    3300026: U_SUV01_gauges
+    3300028: U_SUV01_gauges_SW
+    3300030: U_SUV01_glassLight
+    3300032: U_SUV01_grille_SW
+    3300034: U_SUV01_hazardLight
+    3300036: U_SUV01_interiorDetails
+    3300038: U_SUV01_Leather
+    3300040: U_SUV01_leather_02
+    3300042: U_SUV01_Leather_02_SW
+    3300044: U_SUV01_Leather_SW
+    3300046: U_SUV01_lightDetails
+    3300048: U_SUV01_lights
+    3300050: U_SUV01_mirror
+    3300052: U_SUV01_plasticPanel
+    3300054: U_SUV01_positionLights
+    3300056: U_SUV01_reverseLights
+    3300058: U_SUV01_rotor_FL
+    3300060: U_SUV01_rotor_FR
+    3300062: U_SUV01_rotor_RL
+    3300064: U_SUV01_rotor_RR
+    3300066: U_SUV01_rpmNeedle
+    3300068: U_SUV01_seam
+    3300070: U_SUV01_seam_SW
+    3300072: U_SUV01_seatLeather
+    3300074: U_SUV01_seatLeather_02
+    3300076: U_SUV01_speedNeedle
+    3300078: U_SUV01_tire_FL
+    3300080: U_SUV01_tire_FR
+    3300082: U_SUV01_tire_RL
+    3300084: U_SUV01_tire_RR
+    3300086: U_SUV01_transpIcons
+    3300088: U_SUV01_transpIcons_SW
+    3300090: U_SUV01_wheel_FL 1
+    3300092: U_SUV01_wheel_FR 1
+    3300094: U_SUV01_wheel_RL 1
+    3300096: U_SUV01_wheel_RR 1
+    3300098: U_SUV01_windows
+    4300000: U_SUV01_windows
+    4300002: U_SUV01_carPaint
+    4300004: U_SUV01_glassLight
+    4300006: U_SUV01_lights
+    4300008: U_SUV01_lightDetails
+    4300010: U_SUV01_carDetails
+    4300012: U_SUV01_positionLights
+    4300014: U_SUV01_frontLights
+    4300016: U_SUV01_hazardLight
+    4300018: U_SUV01_reverseLights
+    4300020: U_SUV01_brakeLights
+    4300022: U_SUV01_wheel_RR
+    4300024: U_SUV01_rotor_RR
+    4300026: U_SUV01_caliper_RR
+    4300028: U_SUV01_tire_RR
+    4300030: U_SUV01_wheel_FR
+    4300032: U_SUV01_rotor_FR
+    4300034: U_SUV01_caliper_FR
+    4300036: U_SUV01_tire_FR
+    4300038: U_SUV01_wheel_FL
+    4300040: U_SUV01_rotor_FL
+    4300042: U_SUV01_caliper_FL
+    4300044: U_SUV01_tire_FL
+    4300046: U_SUV01_wheel_RL
+    4300048: U_SUV01_rotor_RL
+    4300050: U_SUV01_caliper_RL
+    4300052: U_SUV01_tire_RL
+    4300054: U_SUV01_seam
+    4300056: U_SUV01_seam_SW
+    4300058: U_SUV01_Leather_SW
+    4300060: U_SUV01_grille_SW
+    4300062: U_SUV01_Leather_02_SW
+    4300064: U_SUV01_chrome_SW
+    4300066: U_SUV01_gauges_SW
+    4300068: U_SUV01_transpIcons_SW
+    4300070: U_SUV01_gauges
+    4300072: U_SUV01_carbonfiber
+    4300074: U_SUV01_chrome
+    4300076: U_SUV01_carbon02
+    4300078: U_SUV01_interiorDetails
+    4300080: U_SUV01_seatLeather
+    4300082: U_SUV01_seatLeather_02
+    4300084: U_SUV01_Leather
+    4300086: U_SUV01_leather_02
+    4300088: U_SUV01_plasticPanel
+    4300090: U_SUV01_mirror
+    4300092: U_SUV01_transpIcons
+    4300094: U_SUV01_rpmNeedle
+    4300096: U_SUV01_speedNeedle
+    4300098: U_SUV01_collider
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_Leather_shdr
+    second: {fileID: 2100000, guid: ad4d8ecbc954b274ea744134fc89adfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_carDetails_shdr
+    second: {fileID: 2100000, guid: a9a693d93d8d4374c8583a04d4a8943f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_carPaint_shdr
+    second: {fileID: 2100000, guid: b08802fe752f02546bfd33b3a39ec0a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_carbon02_shdr
+    second: {fileID: 2100000, guid: 2d269c417c02b77409f13dffee865109, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_carbonfiber_shdr
+    second: {fileID: 2100000, guid: 2352fea941871754287bc1f280cc293b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_chrome_shdr
+    second: {fileID: 2100000, guid: 79e93ff3f63575c4f8024c742b2aba3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_gauges_shdr
+    second: {fileID: 2100000, guid: 3be85aa39e5eb8f43bbe581dcf09c688, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_lightGlass_shdr
+    second: {fileID: 2100000, guid: c3e15b66d003d3e48af022b43e374839, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_lights_shdr
+    second: {fileID: 2100000, guid: 3cd15fa0d11de0442bec8bbd6602a7f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_mirror_shdr
+    second: {fileID: 2100000, guid: 268fba967db474043a2580a6045fe91d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_plasticPanel_shdr
+    second: {fileID: 2100000, guid: 42010b3ba28db284882ca4c86e288e35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_steeringWheel_leather_shdr
+    second: {fileID: 2100000, guid: ecc3044434e8b5345afc2eb7e78d7d3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_transpIcons_shdr
+    second: {fileID: 2100000, guid: 7455861d9b1b1844ab236bef8d3c22f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_wheel_shdr
+    second: {fileID: 2100000, guid: b590e27fdbd46654f83e59596d4cae82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_wheels_Details_shdr
+    second: {fileID: 2100000, guid: 36ffb0baf86e2d14cb591083d70f0b81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: U_SUV01_window_shdr
+    second: {fileID: 2100000, guid: 96b467bf48be05843ae498309347d4f7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 4.82
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

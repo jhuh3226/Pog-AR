@@ -36,18 +36,18 @@ public class Case7CanvasHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if pogBot pass position3, turn on CV1
+        //if pogBot crashed car
         Case7BeizerCurvePogBot case7BeizerCurvePogBot = gameObCase7BeizerCurvePogBot.GetComponent<Case7BeizerCurvePogBot>();
-        if (case7BeizerCurvePogBot.pogBotPassedPoint3)
+        if (case7BeizerCurvePogBot.stopBeizerCurve)
         {
-            if (case7BeizerCurvePogBot.lastPointTime != 0 && Time.fixedTime - case7BeizerCurvePogBot.lastPointTime >= 1)
+            if (case7BeizerCurvePogBot.lastPointTime != 0 && Time.fixedTime - case7BeizerCurvePogBot.lastPointTime >= 2)
             {
                 CV1.GetComponent<Canvas>().enabled = true;
             }
         }
 
         // 2seconds passed after clicking bt2, activate CV4Text and image 
-        if (bt2ClickedTime != 0 && Time.fixedTime - bt2ClickedTime >= 2)
+        if (bt2ClickedTime != 0 && Time.fixedTime - bt2ClickedTime >= 3)
         {
             //disable
             CV3Text.SetActive(false);
@@ -57,7 +57,7 @@ public class Case7CanvasHolder : MonoBehaviour
         }
 
         // 4seconds passed after clicking bt2, activate comission complete
-        if (bt2ClickedTime != 0 && Time.fixedTime - bt2ClickedTime >= 4)
+        if (bt2ClickedTime != 0 && Time.fixedTime - bt2ClickedTime >= 5)
         {
             //disable
             CV4Text.SetActive(false);

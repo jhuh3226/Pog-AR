@@ -30,7 +30,7 @@ public class Case4BeizerCurveCar : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.4f;
+        speedModifier = 0.35f;
         coroutineAllowed = true;
         //rotationSpeed = 3.0f;
 
@@ -42,7 +42,7 @@ public class Case4BeizerCurveCar : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.4f;
+        speedModifier = 0.35f;
         coroutineAllowed = true;
     }
 

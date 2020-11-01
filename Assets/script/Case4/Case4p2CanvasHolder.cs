@@ -30,6 +30,8 @@ public class Case4p2CanvasHolder : MonoBehaviour
     float CVArrowLeftText3On = 0;
     bool recordTime = true;
 
+    public bool startAnimating = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,9 @@ public class Case4p2CanvasHolder : MonoBehaviour
             CVArrowLeftText.SetActive(false);
             CVArrowLeftText2.GetComponent<Canvas>().enabled = true;
 
+            //turn off animation "look left loop"
+            startAnimating = false;
+
         }
 
         //if truck passed the last point, then move the pogBot
@@ -59,6 +64,7 @@ public class Case4p2CanvasHolder : MonoBehaviour
         {
                 Debug.Log("start moving pogBot");
                 pogBotCrossing.GetComponent<Case4p2BeizerCurvePogBot>().enabled = true;
+
         }
 
         //if pogBot passes the last position, turn off CVArrowLeftText2 and turn on CVArrowLeftText3
@@ -97,6 +103,9 @@ public class Case4p2CanvasHolder : MonoBehaviour
             arrowLeftImage.GetComponent<Case4Blink>().enabled = true;
 
             CVArrowLeftText.GetComponent<Canvas>().enabled = true;
+
+            //turn on animation "look left loop"
+            startAnimating = true;
         }
     }
 }

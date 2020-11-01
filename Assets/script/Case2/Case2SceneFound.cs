@@ -32,6 +32,9 @@ public class Case2SceneFound : MonoBehaviour
             {
                 turnOnScripts();
 
+                //turn on gravity
+                POGCrossing.GetComponent<Rigidbody>().useGravity = true;
+
                 scriptTurnOnDone = true;
             }
         }

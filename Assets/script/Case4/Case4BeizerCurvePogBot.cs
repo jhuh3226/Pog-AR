@@ -13,17 +13,27 @@ public class Case4BeizerCurvePogBot : MonoBehaviour
 
     private Vector3 busPosition;
 
-    private float speedModifier;
+    public float speedModifier;
 
     private bool coroutineAllowed;
 
     public bool pogBotPassedPoint3;
 
+    //collider
+    bool collided = false;
+    bool recorded = false;
+    bool stopBeizerCurve = false;
+    float collidedTime  = 0;
+    //sound
+    public AudioSource crash;
+    public AudioSource carDrift1;
+    bool played = false;
+
     private void Start()
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.37f;
+        //speedModifier = 0.45f;
         coroutineAllowed = true;
 
         pogBotPassedPoint3 = false;
@@ -54,7 +64,8 @@ public class Case4BeizerCurvePogBot : MonoBehaviour
         Vector3 p2 = routes[routeNumber].GetChild(2).localPosition;
         Vector3 p3 = routes[routeNumber].GetChild(3).localPosition;
 
-        while (tParam < 2)
+        //move it along the beizer curver unless pogBot hits car/truck
+        while (tParam < 2 && !stopBeizerCurve)
         {
             //stop the movement
             if (pogBotPassedPoint3 == false)
@@ -77,5 +88,37 @@ public class Case4BeizerCurvePogBot : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+    }
+
+//count the timer of when it collided
+    void OnCollisionEnter(Collision collision)
+    {
+        //Check for a match with the specific tag on any GameObject that collides with your GameObject
+        if (collision.gameObject.tag == "car")
+        {
+            //If the GameObject has the same tag as specified, output this message in the console
+            collided = true;
+
+            if (!recorded)
+            {
+                collidedTime = Time.fixedTime;
+                recorded = !recorded;
+            }
+            Debug.Log("pogBot collided car "+ collidedTime);
+
+            if(collidedTime!=0 && Time.fixedTime - collidedTime>0.3)
+            {
+                stopBeizerCurve = true;
+
+                //Change to true to show that there was just a change in the toggle state
+                if (!played)
+                {
+                    crash.Play();
+                    carDrift1.Play();
+                    played = !played;
+                }
+            }
+            //Debug.Log("stop beizerCurve" + (Time.fixedTime - collidedTime));
+        }
     }
 }

@@ -18,7 +18,7 @@ public class Case6p2CanvasHolder : MonoBehaviour
     public GameObject car;
     public GameObject pogBot;
 
-    public GameObject gameObCase6BeizerCurvePogBot;
+    public GameObject gameObCase6p2BeizerCurvePogBot;
 
     //bool to animate
     public bool startAnimating = false;
@@ -40,10 +40,10 @@ public class Case6p2CanvasHolder : MonoBehaviour
         ArrowImage.GetComponent<Case6p2MoveArrow>().enabled = true;
 
         //if two seconds passed after the pogBotReaches the last point, activate CV3
-        Case6BeizerCurvePogBot case6BeizerCurvePogBot = gameObCase6BeizerCurvePogBot.GetComponent<Case6BeizerCurvePogBot>();
-        if (case6BeizerCurvePogBot.pogBotPassedPoint3)
+        Case6p2BeizerCurvePogBot case6p2BeizerCurvePogBot = gameObCase6p2BeizerCurvePogBot.GetComponent<Case6p2BeizerCurvePogBot>();
+        if (case6p2BeizerCurvePogBot.pogBotPassedPoint3)
         {
-            if(Time.fixedTime - case6BeizerCurvePogBot.lastPointTime > 2)
+            if(Time.fixedTime - case6p2BeizerCurvePogBot.lastPointTime > 2)
             {
                 //disable
                 CV2.SetActive(false);
@@ -54,9 +54,9 @@ public class Case6p2CanvasHolder : MonoBehaviour
         }
 
         //if two seconds passed after activating CV3, activate comission complete
-        if(case6BeizerCurvePogBot.pogBotPassedPoint3)
+        if(case6p2BeizerCurvePogBot.pogBotPassedPoint3)
         {
-            if(Time.fixedTime - case6BeizerCurvePogBot.lastPointTime > 4)
+            if(Time.fixedTime - case6p2BeizerCurvePogBot.lastPointTime > 4)
             {
                 //disable
                 CV3.SetActive(false);
@@ -84,6 +84,6 @@ public class Case6p2CanvasHolder : MonoBehaviour
         car.GetComponent<Case6BeizerCurveCar>().enabled = true;
 
         //move the pogbot by turning on the beizercurve script
-        pogBot.GetComponent<Case6BeizerCurvePogBot>().enabled = true;
+        pogBot.GetComponent<Case6p2BeizerCurvePogBot>().enabled = true;
     }
 }

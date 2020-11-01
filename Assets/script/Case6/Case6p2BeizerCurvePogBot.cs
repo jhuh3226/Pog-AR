@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Case5BeizerCurvePogBot : MonoBehaviour
+public class Case6p2BeizerCurvePogBot : MonoBehaviour
 {
     [SerializeField]
     private Transform[] routes;
@@ -13,25 +13,24 @@ public class Case5BeizerCurvePogBot : MonoBehaviour
 
     private Vector3 busPosition;
 
-    public float speedModifier;
+    private float speedModifier;
 
     private bool coroutineAllowed;
 
     public bool pogBotPassedPoint2;
     public bool pogBotPassedPoint3;
 
+    public float lastPointTime;
+    bool recorded = false;
+
     //collider
     bool stopBeizerCurve = false;
-    //sound
-    public AudioSource crash;
-    public AudioSource carDrift1;
-    bool played = false;
 
     private void Start()
     {
         routeToGo = 0;
         tParam = 0f;
-        //speedModifier = 0.37f;
+        speedModifier = 0.37f;
         coroutineAllowed = true;
 
         pogBotPassedPoint2 = false;
@@ -63,27 +62,36 @@ public class Case5BeizerCurvePogBot : MonoBehaviour
         Vector3 p2 = routes[routeNumber].GetChild(2).localPosition;
         Vector3 p3 = routes[routeNumber].GetChild(3).localPosition;
 
-        while (tParam < 2 && !stopBeizerCurve)
+        while (tParam < 2)
         {
             //stop the movement
-            //if (pogBotPassedPoint2 == false)
-            //{
+            if (pogBotPassedPoint3 == false)
+            {
                 tParam += Time.deltaTime * speedModifier;
 
-                busPosition = Mathf.Pow(1 - tParam, 3) * p0 + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 + Mathf.Pow(tParam, 3) * p3;
+            busPosition = Mathf.Pow(1 - tParam, 3) * p0 + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 + Mathf.Pow(tParam, 3) * p3;
 
-                transform.localPosition = busPosition;
-            //}
+            transform.localPosition = busPosition;
+            }
 
             //stop the pogbot
-            if (transform.localPosition.y < p2.y)
+            if (transform.localPosition.x > p2.x)
             {
                 pogBotPassedPoint2 = true;
             }
 
-            if (transform.localPosition.y < p3.y)
+            if (transform.localPosition.x > p3.x)
             {
                 pogBotPassedPoint3 = true;
+
+                if (recorded == false)
+                {
+                    lastPointTime = Time.fixedTime;
+                    recorded = !recorded;
+
+                    //enable gravity
+                    this.GetComponent<Rigidbody>().useGravity = true;
+                }
             }
 
             //if passed p3, then stop the pogBot, and start new pogBot with errors pointing
@@ -91,23 +99,5 @@ public class Case5BeizerCurvePogBot : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-    }
-
-    //count the timer of when it collided
-    void OnCollisionEnter(Collision collision)
-    {
-        //Check for a match with the specific tag on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "car")
-        {
-            stopBeizerCurve = true;
-
-            //Change to true to show that there was just a change in the toggle state
-            if (!played)
-            {
-                crash.Play();
-                carDrift1.Play();
-                played = !played;
-            }
-        }
     }
 }

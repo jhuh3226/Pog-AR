@@ -552,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94292180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.54, y: -0.35, z: -2.63}
+  m_LocalPosition: {x: 0.54, y: -1.56, z: -2.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1250107190}
@@ -5278,7 +5278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8851c3f1b28c44015937d3891e4001cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.3
   arrowMovedThreeTimes: 0
 --- !u!114 &798897858
 MonoBehaviour:
@@ -6664,7 +6664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee622262c0ba9490f8e004de671f331a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObCase3p2BeizerCurveCar: {fileID: 1504748520}
+  gameObCase3p2BeizerCurveCar: {fileID: 1499891042}
   POGCrossing: {fileID: 412403821}
 --- !u!114 &1052371641
 MonoBehaviour:
@@ -6990,7 +6990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128557159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.54, y: -2.8, z: -2.63}
+  m_LocalPosition: {x: 0.54, y: -4.54, z: -2.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1250107190}
@@ -9101,7 +9101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c87e4717e284f0f82634e9f5575eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObCase3p2BeizerCurveCar: {fileID: 1504748520}
+  gameObCase3p2BeizerCurveCar: {fileID: 1499891042}
 --- !u!1 &1504748520
 GameObject:
   m_ObjectHideFlags: 0
@@ -10320,7 +10320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672874236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.54, y: -5.93, z: -2.63}
+  m_LocalPosition: {x: 0.54, y: -8.22, z: -2.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1250107190}

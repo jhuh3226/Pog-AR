@@ -13,7 +13,7 @@ public class Case2BeizerCurveCar : MonoBehaviour
 
     private Vector3 busPosition;
 
-    private float speedModifier;
+    public float speedModifier;
 
     private bool coroutineAllowed;
 
@@ -30,7 +30,7 @@ public class Case2BeizerCurveCar : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.4f;
+        //speedModifier = 0.4f;
         coroutineAllowed = true;
         //rotationSpeed = 3.0f;
 

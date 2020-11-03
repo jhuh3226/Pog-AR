@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GoundPlaneTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case1.unity
     guid: 126199ce482d445fa81d56c4ead4aebd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case1-2.unity
     guid: 52dbdde3762f548e79b20223aa1ad776
   - enabled: 1
@@ -50,16 +50,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Case8.unity
     guid: 088e2520414464c14992f2230907e50d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case9.unity
     guid: a2141c10528d04f91a3f93b06e45a06c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case9-2.unity
     guid: a48472c4a804c4bf9826c2e05f3b2bec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case10-2.unity
     guid: f89708788021d4930b773b33a9704ea7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case10.unity
     guid: befcd6c7560b64400ac3e8496eca3865
   m_configObjects: {}

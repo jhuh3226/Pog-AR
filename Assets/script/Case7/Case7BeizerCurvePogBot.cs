@@ -116,7 +116,7 @@ public class Case7BeizerCurvePogBot : MonoBehaviour
                 played = !played;
             }
 
-            //record grashTime
+            //record crashTime
             if (recorded == false)
             {
                 lastPointTime = Time.fixedTime;

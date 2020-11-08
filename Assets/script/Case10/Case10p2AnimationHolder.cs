@@ -23,7 +23,7 @@ public class Case10p2AnimationHolder : MonoBehaviour
     {
         Case10p2BeizerCurvePogBot case10p2BeizerCurvePogBot = gameObCase10p2BeizerCurvePogBot.GetComponent<Case10p2BeizerCurvePogBot>();
 
-        if (case10p2BeizerCurvePogBot.pogBotPassedPoint3)
+        if (case10p2BeizerCurvePogBot.pogBotPassedPoint1)
         {
             turnHeadLeftAnimation();
 

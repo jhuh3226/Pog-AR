@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GoundPlaneTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Case1.unity
     guid: 126199ce482d445fa81d56c4ead4aebd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Case1-2.unity
     guid: 52dbdde3762f548e79b20223aa1ad776
+  - enabled: 1
+    path: Assets/Scenes/Case1-3.unity
+    guid: 93d8238dc77464fc2aaf354b375b27ce
   - enabled: 1
     path: Assets/Scenes/Case2.unity
     guid: 6f42f56d5ab38487f8ad7e0680bbc070

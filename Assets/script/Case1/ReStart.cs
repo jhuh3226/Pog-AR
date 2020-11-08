@@ -7,7 +7,7 @@ public class ReStart : MonoBehaviour {
 
 public void RestartGame()
     {
-        SceneManager.LoadScene("Case1-2");
+        SceneManager.LoadScene("Case1-3");
     }
 
 public void RestartGame2()

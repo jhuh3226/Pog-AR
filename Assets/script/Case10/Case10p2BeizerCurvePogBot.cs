@@ -18,6 +18,7 @@ public class Case10p2BeizerCurvePogBot : MonoBehaviour
 
     private bool coroutineAllowed;
 
+    public bool pogBotPassedPoint1;
     public bool pogBotPassedPoint2;
     public bool pogBotPassedPoint3;
 
@@ -68,6 +69,11 @@ public class Case10p2BeizerCurvePogBot : MonoBehaviour
             }
 
             //stop the pogbot
+            if (transform.localPosition.y < p1.y)
+            {
+                pogBotPassedPoint1 = true;
+            }
+
             if (transform.localPosition.y < p2.y)
             {
                 pogBotPassedPoint2 = true;

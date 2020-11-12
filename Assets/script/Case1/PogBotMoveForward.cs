@@ -48,7 +48,7 @@ public class PogBotMoveForward : MonoBehaviour
 
         //Debug.Log(this.transform.localPosition.z);
         startPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
-        endPosition = new Vector3(transform.localPosition.x, -1.3f, transform.localPosition.z);
+        endPosition = new Vector3(transform.localPosition.x, -2.1f, transform.localPosition.z);
 
         //if (this.transform.localPosition.z <= -0.7f)
         //{

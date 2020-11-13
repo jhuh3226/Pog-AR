@@ -48,7 +48,7 @@ public class PogBotMoveForward : MonoBehaviour
 
         //Debug.Log(this.transform.localPosition.z);
         startPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
-        endPosition = new Vector3(transform.localPosition.x, -2.1f, transform.localPosition.z);
+        endPosition = new Vector3(transform.localPosition.x, -5.78f, transform.localPosition.z);
 
         //if (this.transform.localPosition.z <= -0.7f)
         //{
@@ -69,7 +69,7 @@ public class PogBotMoveForward : MonoBehaviour
         //Debug.Log(m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
 
         //When entering the lookLeft state in the Animator, output the message in the console
-        if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f && m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.15f)
+        if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.1f && m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.2f)
         {
             Debug.Log("lookLeft");
             this.GetComponent<Animator>().runtimeAnimatorController = animLookLeft as RuntimeAnimatorController;
@@ -82,7 +82,7 @@ public class PogBotMoveForward : MonoBehaviour
 
         if (stopMoving == true)
         {
-            if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.5f)
+            if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.55f)
 
             {
                 pogBot1.SetActive(false);

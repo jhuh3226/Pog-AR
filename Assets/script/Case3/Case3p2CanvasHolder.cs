@@ -9,6 +9,7 @@ public class Case3p2CanvasHolder : MonoBehaviour
 
     public Canvas CanvasArrow;
     public GameObject Arrow;
+    public GameObject Car;
 
     public Canvas CVMissionClear;
 
@@ -77,6 +78,7 @@ public class Case3p2CanvasHolder : MonoBehaviour
         {
             CanvasArrow.enabled = true;
             Arrow.GetComponent<Case3p2MoveArrow>().enabled = true;
+            Car.SetActive(false);
 
         }
 

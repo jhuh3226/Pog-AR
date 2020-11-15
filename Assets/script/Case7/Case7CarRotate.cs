@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Case7CarRotate : MonoBehaviour
 {
-    private float rotationSpeed;
+    public float rotationSpeed;
     private float currentAngle;
     private float desiredAngle;
 
@@ -13,7 +13,7 @@ public class Case7CarRotate : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rotationSpeed = 20f;
+        //rotationSpeed = 20f;
 
         currentAngle = 0f;
         desiredAngle = 30.0f;

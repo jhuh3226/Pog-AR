@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Case4CarRotate : MonoBehaviour
 {
-    private float rotationSpeed;
+    public float rotationSpeed;
 
 
     public GameObject gameObCase4BeizerCurveCar;
@@ -12,7 +12,7 @@ public class Case4CarRotate : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rotationSpeed = 20f;
+        //rotationSpeed = 20f;
     }
 
     // Update is called once per frame
@@ -24,14 +24,14 @@ public class Case4CarRotate : MonoBehaviour
 
         if (case4BeizerCurveCar.vehiclePassedPoint3 == false)
         {
-            if (case4BeizerCurveCar.vehiclePassedPoint1 == true)
-            {
+            //if (case4BeizerCurveCar.vehiclePassedPoint1 == true)
+            //{
                 //rotate car to x axis, x goes lower
                 transform.Rotate(Vector3.up * (rotationSpeed * Time.deltaTime));
                 Debug.Log("Car rotate");
 
-                rotationSpeed = rotationSpeed + 0.1f;
-            }
+                rotationSpeed = rotationSpeed + 0.3f;
+            //}
         }
 
     }

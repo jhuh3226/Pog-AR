@@ -48,7 +48,7 @@ public class PogBotMoveRight : MonoBehaviour
 
             // pogBot crossing street
             startPosition = new Vector3(pogBotCrossingStreet.transform.localPosition.x, pogBotCrossingStreet.transform.localPosition.y, pogBotCrossingStreet.transform.localPosition.z);
-            endPosition = new Vector3(pogBotCrossingStreet.transform.localPosition.x, -8.0f, pogBotCrossingStreet.transform.localPosition.z);
+            endPosition = new Vector3(4.15f, -8.0f, 0.3f);
 
             pogBotCrossingStreet.transform.localPosition = Vector3.Lerp(startPosition, endPosition, speed * Time.deltaTime);
         }

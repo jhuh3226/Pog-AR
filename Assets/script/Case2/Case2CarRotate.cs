@@ -19,7 +19,7 @@ public class Case2CarRotate : MonoBehaviour
         //rotationSpeed = 0.002f;
         //currentAngle = 0.0f;
         //desiredAngle = 50.0f;
-        rotationSpeed = 20f;
+        rotationSpeed = 30f;
         //currentAngle = 90.0f;
         //desiredAngle = 150.0f;
         currentAngle = 0f;

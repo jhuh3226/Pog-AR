@@ -67,6 +67,9 @@ public class Case5p2CanvasHolder : MonoBehaviour
         Case5p2BeizerCurveCar case5p2BeizerCurveCar = gameObCase5p2BeizerCurveCar.GetComponent<Case5p2BeizerCurveCar>();
         if (case5p2BeizerCurveCar.vehiclePassedPoint3 == true)
         {
+            //inactive
+            car.SetActive(false);
+
             Debug.Log("start moving pogBot");
             pogBotCrossing.GetComponent<Case5p2BeizerCurvePogBot>().enabled = true;
 

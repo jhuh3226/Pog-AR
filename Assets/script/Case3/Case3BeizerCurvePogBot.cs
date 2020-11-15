@@ -30,7 +30,7 @@ public class Case3BeizerCurvePogBot : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.5f;
+        speedModifier = 0.6f;
         coroutineAllowed = true;
 
         pogBotPassedPoint3 = false;

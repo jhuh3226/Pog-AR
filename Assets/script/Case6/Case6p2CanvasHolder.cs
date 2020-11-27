@@ -11,6 +11,17 @@ public class Case6p2CanvasHolder : MonoBehaviour
     public GameObject CV2;
     public GameObject CV3;
     public GameObject CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     public GameObject CVArrow1;
     public GameObject ArrowImage;
@@ -29,6 +40,24 @@ public class Case6p2CanvasHolder : MonoBehaviour
         //bt
         Button btn1 = bt1.GetComponent<Button>();
         btn1.onClick.AddListener(TaskOnClick1);
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
     }
 
     // Update is called once per frame
@@ -61,8 +90,12 @@ public class Case6p2CanvasHolder : MonoBehaviour
                 //disable
                 CV3.SetActive(false);
 
-                //enable
-                CVMissionClear.GetComponent<Canvas>().enabled = true;
+
+                if (!btSeeMoreClicked)
+                {
+                    //enable
+                    CVMissionClear.GetComponent<Canvas>().enabled = true;
+                }
             }
         }
     }
@@ -85,5 +118,46 @@ public class Case6p2CanvasHolder : MonoBehaviour
 
         //move the pogbot by turning on the beizercurve script
         pogBot.GetComponent<Case6p2BeizerCurvePogBot>().enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        btSeeMoreClicked = true;
+        CVMissionClear.SetActive(false);
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.SetActive(true);
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVBigData.enabled = false;
     }
 }

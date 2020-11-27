@@ -28,7 +28,7 @@ public class Case5p2BeizerCurveCar : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.4f;
+        speedModifier = 0.28f;
         coroutineAllowed = true;
         vehiclePassedPoint2 = false;
         vehiclePassedPoint3 = false;

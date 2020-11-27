@@ -11,6 +11,9 @@ public class Case5p2SceneFound : MonoBehaviour
     public GameObject CVArrow1;
     public GameObject CVArrow1Image;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
     public bool scriptTurnOnDone = false;
 
     // Start is called before the first frame update
@@ -30,6 +33,7 @@ public class Case5p2SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
                 scriptTurnOnDone = true;
             }

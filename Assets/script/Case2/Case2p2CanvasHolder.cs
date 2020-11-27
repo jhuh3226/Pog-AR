@@ -9,6 +9,17 @@ public class Case2p2CanvasHolder : MonoBehaviour
     public Canvas CV2;
     public Canvas CanvasArrow;
     public Canvas CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     public GameObject gameObContainingCase2p2ActivatePogBot2;
     public GameObject gameObContainingCase2p2MoveArrow;
@@ -22,6 +33,24 @@ public class Case2p2CanvasHolder : MonoBehaviour
         CV2.enabled = false;
         CanvasArrow.enabled = false;
         CVMissionClear.enabled = false;
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
     }
 
     // Update is called once per frame
@@ -49,8 +78,59 @@ public class Case2p2CanvasHolder : MonoBehaviour
         //if arrow moved three times, disable CV2 and enable CV mission clear
         if (case2p2MoveArrow.arrowMovedThreeTimes == true)
         {
-            CVMissionClear.enabled = true;
+            if (!btSeeMoreClicked)
+            {
+                CVMissionClear.enabled = true;
+                
+            }
             CV2.enabled = false;
         }
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        btSeeMoreClicked = true;
+        CV2.enabled = false;
+        CVMissionClear.enabled = false;
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.enabled = true;
+        CV2.enabled = false;
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CV2.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CV2.enabled = false;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CV2.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CV2.enabled = false;
+        CVBigData.enabled = false;
     }
 }

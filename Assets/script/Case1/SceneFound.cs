@@ -12,6 +12,13 @@ public class SceneFound : MonoBehaviour
     public GameObject pogBot;
     public GameObject eventSystem;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
+    //timer
+    float targetFoundTime = 0;
+    float currentTime = 0;
+    bool recorded = false;
 
     bool scriptTurnOnDone;
 
@@ -31,6 +38,14 @@ public class SceneFound : MonoBehaviour
 
         if (script.targetFound == true)
         {
+            if (!recorded)
+            {
+                targetFoundTime = Time.fixedTime;
+
+                print(targetFoundTime);
+                recorded = true;
+            }
+
             //Car1.SetActive(true);
             if (pogBotMoveForwardScript.pogBot2Activated == false)
             {
@@ -43,10 +58,17 @@ public class SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 print("target found");
+                print(Time.fixedTime);
 
-                turnOnScripts();
+                //if (targetFoundTime > 0 && Time.fixedTime - targetFoundTime > 2)
+                //{
+                    print("turn on script");
+                    turnOnScripts();
 
-                scriptTurnOnDone = true;
+                    CVGoBackQR.enabled = true;
+
+                    scriptTurnOnDone = true;
+                //}
             }
 
         }

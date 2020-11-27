@@ -20,6 +20,9 @@ public class Case4p2SceneFound : MonoBehaviour
 
     bool pogBotStartedMoving = false;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class Case4p2SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
                 scriptTurnOnDone = true;
             }

@@ -99,6 +99,8 @@ public class Case4BeizerCurvePogBot : MonoBehaviour
             //If the GameObject has the same tag as specified, output this message in the console
             collided = true;
 
+            this.GetComponent<Rigidbody>().useGravity = true;
+
             if (!recorded)
             {
                 collidedTime = Time.fixedTime;

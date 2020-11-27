@@ -1,226 +1,662 @@
 fileFormatVersion: 2
 guid: 45b9a578783ff4de88a59d707d18f455
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Body1
-    100002: Body:1
-    100004: borderbody
-    100006: Head
-    100008: head1
-    100010: head:1
-    100012: Hips
-    100014: innerbody
-    100016: LeftArm
-    100018: LeftFoot
-    100020: LeftForeArm
-    100022: LeftHand
-    100024: leftHead
-    100026: LeftLeg
-    100028: LeftShoulder
-    100030: LeftToeBase
-    100032: LeftUpLeg
-    100034: middleHead
-    100036: Neck
-    100038: //RootNode
-    100040: POG_Character_v.0_forRig v8
-    100042: QuickRigCharacter_Ctrl_ChestEndEffector
-    100044: QuickRigCharacter_Ctrl_ChestOriginEffector
-    100046: QuickRigCharacter_Ctrl_Head
-    100048: QuickRigCharacter_Ctrl_HeadEffector
-    100050: QuickRigCharacter_Ctrl_Hips
-    100052: QuickRigCharacter_Ctrl_HipsEffector
-    100054: QuickRigCharacter_Ctrl_LeftAnkleEffector
-    100056: QuickRigCharacter_Ctrl_LeftArm
-    100058: QuickRigCharacter_Ctrl_LeftElbowEffector
-    100060: QuickRigCharacter_Ctrl_LeftFoot
-    100062: QuickRigCharacter_Ctrl_LeftFootEffector
-    100064: QuickRigCharacter_Ctrl_LeftForeArm
-    100066: QuickRigCharacter_Ctrl_LeftHand
-    100068: QuickRigCharacter_Ctrl_LeftHipEffector
-    100070: QuickRigCharacter_Ctrl_LeftKneeEffector
-    100072: QuickRigCharacter_Ctrl_LeftLeg
-    100074: QuickRigCharacter_Ctrl_LeftShoulder
-    100076: QuickRigCharacter_Ctrl_LeftShoulderEffector
-    100078: QuickRigCharacter_Ctrl_LeftToeBase
-    100080: QuickRigCharacter_Ctrl_LeftUpLeg
-    100082: QuickRigCharacter_Ctrl_LeftWristEffector
-    100084: QuickRigCharacter_Ctrl_Neck
-    100086: QuickRigCharacter_Ctrl_Reference
-    100088: QuickRigCharacter_Ctrl_RightAnkleEffector
-    100090: QuickRigCharacter_Ctrl_RightArm
-    100092: QuickRigCharacter_Ctrl_RightElbowEffector
-    100094: QuickRigCharacter_Ctrl_RightFoot
-    100096: QuickRigCharacter_Ctrl_RightFootEffector
-    100098: QuickRigCharacter_Ctrl_RightForeArm
-    100100: QuickRigCharacter_Ctrl_RightHand
-    100102: QuickRigCharacter_Ctrl_RightHipEffector
-    100104: QuickRigCharacter_Ctrl_RightKneeEffector
-    100106: QuickRigCharacter_Ctrl_RightLeg
-    100108: QuickRigCharacter_Ctrl_RightShoulder
-    100110: QuickRigCharacter_Ctrl_RightShoulderEffector
-    100112: QuickRigCharacter_Ctrl_RightToeBase
-    100114: QuickRigCharacter_Ctrl_RightUpLeg
-    100116: QuickRigCharacter_Ctrl_RightWristEffector
-    100118: QuickRigCharacter_Ctrl_Spine
-    100120: QuickRigCharacter_Ctrl_Spine1
-    100122: QuickRigCharacter_Ctrl_Spine2
-    100124: QuickRigCharacter_Guides
-    100126: QuickRigCharacter_Head
-    100128: QuickRigCharacter_Hips
-    100130: QuickRigCharacter_LeftArm
-    100132: QuickRigCharacter_LeftFoot
-    100134: QuickRigCharacter_LeftForeArm
-    100136: QuickRigCharacter_LeftHand
-    100138: QuickRigCharacter_LeftLeg
-    100140: QuickRigCharacter_LeftShoulder
-    100142: QuickRigCharacter_LeftToeBase
-    100144: QuickRigCharacter_LeftUpLeg
-    100146: QuickRigCharacter_Neck
-    100148: QuickRigCharacter_Reference
-    100150: QuickRigCharacter_RightArm
-    100152: QuickRigCharacter_RightFoot
-    100154: QuickRigCharacter_RightForeArm
-    100156: QuickRigCharacter_RightHand
-    100158: QuickRigCharacter_RightLeg
-    100160: QuickRigCharacter_RightShoulder
-    100162: QuickRigCharacter_RightToeBase
-    100164: QuickRigCharacter_RightUpLeg
-    100166: QuickRigCharacter_Spine
-    100168: QuickRigCharacter_Spine1
-    100170: QuickRigCharacter_Spine2
-    100172: Reference
-    100174: RightArm
-    100176: RightFoot
-    100178: RightForeArm
-    100180: RightHand
-    100182: rightHead
-    100184: RightLeg
-    100186: RightShoulder
-    100188: RightToeBase
-    100190: RightUpLeg
-    100192: Spine
-    100194: Spine1
-    100196: Spine2
-    100198: wheel
-    400000: Body1
-    400002: Body:1
-    400004: borderbody
-    400006: Head
-    400008: head1
-    400010: head:1
-    400012: Hips
-    400014: innerbody
-    400016: LeftArm
-    400018: LeftFoot
-    400020: LeftForeArm
-    400022: LeftHand
-    400024: leftHead
-    400026: LeftLeg
-    400028: LeftShoulder
-    400030: LeftToeBase
-    400032: LeftUpLeg
-    400034: middleHead
-    400036: Neck
-    400038: //RootNode
-    400040: POG_Character_v.0_forRig v8
-    400042: QuickRigCharacter_Ctrl_ChestEndEffector
-    400044: QuickRigCharacter_Ctrl_ChestOriginEffector
-    400046: QuickRigCharacter_Ctrl_Head
-    400048: QuickRigCharacter_Ctrl_HeadEffector
-    400050: QuickRigCharacter_Ctrl_Hips
-    400052: QuickRigCharacter_Ctrl_HipsEffector
-    400054: QuickRigCharacter_Ctrl_LeftAnkleEffector
-    400056: QuickRigCharacter_Ctrl_LeftArm
-    400058: QuickRigCharacter_Ctrl_LeftElbowEffector
-    400060: QuickRigCharacter_Ctrl_LeftFoot
-    400062: QuickRigCharacter_Ctrl_LeftFootEffector
-    400064: QuickRigCharacter_Ctrl_LeftForeArm
-    400066: QuickRigCharacter_Ctrl_LeftHand
-    400068: QuickRigCharacter_Ctrl_LeftHipEffector
-    400070: QuickRigCharacter_Ctrl_LeftKneeEffector
-    400072: QuickRigCharacter_Ctrl_LeftLeg
-    400074: QuickRigCharacter_Ctrl_LeftShoulder
-    400076: QuickRigCharacter_Ctrl_LeftShoulderEffector
-    400078: QuickRigCharacter_Ctrl_LeftToeBase
-    400080: QuickRigCharacter_Ctrl_LeftUpLeg
-    400082: QuickRigCharacter_Ctrl_LeftWristEffector
-    400084: QuickRigCharacter_Ctrl_Neck
-    400086: QuickRigCharacter_Ctrl_Reference
-    400088: QuickRigCharacter_Ctrl_RightAnkleEffector
-    400090: QuickRigCharacter_Ctrl_RightArm
-    400092: QuickRigCharacter_Ctrl_RightElbowEffector
-    400094: QuickRigCharacter_Ctrl_RightFoot
-    400096: QuickRigCharacter_Ctrl_RightFootEffector
-    400098: QuickRigCharacter_Ctrl_RightForeArm
-    400100: QuickRigCharacter_Ctrl_RightHand
-    400102: QuickRigCharacter_Ctrl_RightHipEffector
-    400104: QuickRigCharacter_Ctrl_RightKneeEffector
-    400106: QuickRigCharacter_Ctrl_RightLeg
-    400108: QuickRigCharacter_Ctrl_RightShoulder
-    400110: QuickRigCharacter_Ctrl_RightShoulderEffector
-    400112: QuickRigCharacter_Ctrl_RightToeBase
-    400114: QuickRigCharacter_Ctrl_RightUpLeg
-    400116: QuickRigCharacter_Ctrl_RightWristEffector
-    400118: QuickRigCharacter_Ctrl_Spine
-    400120: QuickRigCharacter_Ctrl_Spine1
-    400122: QuickRigCharacter_Ctrl_Spine2
-    400124: QuickRigCharacter_Guides
-    400126: QuickRigCharacter_Head
-    400128: QuickRigCharacter_Hips
-    400130: QuickRigCharacter_LeftArm
-    400132: QuickRigCharacter_LeftFoot
-    400134: QuickRigCharacter_LeftForeArm
-    400136: QuickRigCharacter_LeftHand
-    400138: QuickRigCharacter_LeftLeg
-    400140: QuickRigCharacter_LeftShoulder
-    400142: QuickRigCharacter_LeftToeBase
-    400144: QuickRigCharacter_LeftUpLeg
-    400146: QuickRigCharacter_Neck
-    400148: QuickRigCharacter_Reference
-    400150: QuickRigCharacter_RightArm
-    400152: QuickRigCharacter_RightFoot
-    400154: QuickRigCharacter_RightForeArm
-    400156: QuickRigCharacter_RightHand
-    400158: QuickRigCharacter_RightLeg
-    400160: QuickRigCharacter_RightShoulder
-    400162: QuickRigCharacter_RightToeBase
-    400164: QuickRigCharacter_RightUpLeg
-    400166: QuickRigCharacter_Spine
-    400168: QuickRigCharacter_Spine1
-    400170: QuickRigCharacter_Spine2
-    400172: Reference
-    400174: RightArm
-    400176: RightFoot
-    400178: RightForeArm
-    400180: RightHand
-    400182: rightHead
-    400184: RightLeg
-    400186: RightShoulder
-    400188: RightToeBase
-    400190: RightUpLeg
-    400192: Spine
-    400194: Spine1
-    400196: Spine2
-    400198: wheel
-    2100000: Default_Material
-    2100002: Steel - Satin
-    2100004: Aluminum - Bead Blasted
-    2100006: ABS (White)
-    2100008: ABS (White)_modified
-    4300000: middleHead
-    4300002: rightHead
-    4300004: leftHead
-    4300006: wheel
-    4300008: borderbody
-    4300010: innerbody
-    9500000: //RootNode
-    13700000: borderbody
-    13700002: innerbody
-    13700004: leftHead
-    13700006: middleHead
-    13700008: rightHead
-    13700010: wheel
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body1
+  - first:
+      1: 100002
+    second: Body:1
+  - first:
+      1: 100004
+    second: borderbody
+  - first:
+      1: 100006
+    second: Head
+  - first:
+      1: 100008
+    second: head1
+  - first:
+      1: 100010
+    second: head:1
+  - first:
+      1: 100012
+    second: Hips
+  - first:
+      1: 100014
+    second: innerbody
+  - first:
+      1: 100016
+    second: LeftArm
+  - first:
+      1: 100018
+    second: LeftFoot
+  - first:
+      1: 100020
+    second: LeftForeArm
+  - first:
+      1: 100022
+    second: LeftHand
+  - first:
+      1: 100024
+    second: leftHead
+  - first:
+      1: 100026
+    second: LeftLeg
+  - first:
+      1: 100028
+    second: LeftShoulder
+  - first:
+      1: 100030
+    second: LeftToeBase
+  - first:
+      1: 100032
+    second: LeftUpLeg
+  - first:
+      1: 100034
+    second: middleHead
+  - first:
+      1: 100036
+    second: Neck
+  - first:
+      1: 100038
+    second: //RootNode
+  - first:
+      1: 100040
+    second: POG_Character_v.0_forRig v8
+  - first:
+      1: 100042
+    second: QuickRigCharacter_Ctrl_ChestEndEffector
+  - first:
+      1: 100044
+    second: QuickRigCharacter_Ctrl_ChestOriginEffector
+  - first:
+      1: 100046
+    second: QuickRigCharacter_Ctrl_Head
+  - first:
+      1: 100048
+    second: QuickRigCharacter_Ctrl_HeadEffector
+  - first:
+      1: 100050
+    second: QuickRigCharacter_Ctrl_Hips
+  - first:
+      1: 100052
+    second: QuickRigCharacter_Ctrl_HipsEffector
+  - first:
+      1: 100054
+    second: QuickRigCharacter_Ctrl_LeftAnkleEffector
+  - first:
+      1: 100056
+    second: QuickRigCharacter_Ctrl_LeftArm
+  - first:
+      1: 100058
+    second: QuickRigCharacter_Ctrl_LeftElbowEffector
+  - first:
+      1: 100060
+    second: QuickRigCharacter_Ctrl_LeftFoot
+  - first:
+      1: 100062
+    second: QuickRigCharacter_Ctrl_LeftFootEffector
+  - first:
+      1: 100064
+    second: QuickRigCharacter_Ctrl_LeftForeArm
+  - first:
+      1: 100066
+    second: QuickRigCharacter_Ctrl_LeftHand
+  - first:
+      1: 100068
+    second: QuickRigCharacter_Ctrl_LeftHipEffector
+  - first:
+      1: 100070
+    second: QuickRigCharacter_Ctrl_LeftKneeEffector
+  - first:
+      1: 100072
+    second: QuickRigCharacter_Ctrl_LeftLeg
+  - first:
+      1: 100074
+    second: QuickRigCharacter_Ctrl_LeftShoulder
+  - first:
+      1: 100076
+    second: QuickRigCharacter_Ctrl_LeftShoulderEffector
+  - first:
+      1: 100078
+    second: QuickRigCharacter_Ctrl_LeftToeBase
+  - first:
+      1: 100080
+    second: QuickRigCharacter_Ctrl_LeftUpLeg
+  - first:
+      1: 100082
+    second: QuickRigCharacter_Ctrl_LeftWristEffector
+  - first:
+      1: 100084
+    second: QuickRigCharacter_Ctrl_Neck
+  - first:
+      1: 100086
+    second: QuickRigCharacter_Ctrl_Reference
+  - first:
+      1: 100088
+    second: QuickRigCharacter_Ctrl_RightAnkleEffector
+  - first:
+      1: 100090
+    second: QuickRigCharacter_Ctrl_RightArm
+  - first:
+      1: 100092
+    second: QuickRigCharacter_Ctrl_RightElbowEffector
+  - first:
+      1: 100094
+    second: QuickRigCharacter_Ctrl_RightFoot
+  - first:
+      1: 100096
+    second: QuickRigCharacter_Ctrl_RightFootEffector
+  - first:
+      1: 100098
+    second: QuickRigCharacter_Ctrl_RightForeArm
+  - first:
+      1: 100100
+    second: QuickRigCharacter_Ctrl_RightHand
+  - first:
+      1: 100102
+    second: QuickRigCharacter_Ctrl_RightHipEffector
+  - first:
+      1: 100104
+    second: QuickRigCharacter_Ctrl_RightKneeEffector
+  - first:
+      1: 100106
+    second: QuickRigCharacter_Ctrl_RightLeg
+  - first:
+      1: 100108
+    second: QuickRigCharacter_Ctrl_RightShoulder
+  - first:
+      1: 100110
+    second: QuickRigCharacter_Ctrl_RightShoulderEffector
+  - first:
+      1: 100112
+    second: QuickRigCharacter_Ctrl_RightToeBase
+  - first:
+      1: 100114
+    second: QuickRigCharacter_Ctrl_RightUpLeg
+  - first:
+      1: 100116
+    second: QuickRigCharacter_Ctrl_RightWristEffector
+  - first:
+      1: 100118
+    second: QuickRigCharacter_Ctrl_Spine
+  - first:
+      1: 100120
+    second: QuickRigCharacter_Ctrl_Spine1
+  - first:
+      1: 100122
+    second: QuickRigCharacter_Ctrl_Spine2
+  - first:
+      1: 100124
+    second: QuickRigCharacter_Guides
+  - first:
+      1: 100126
+    second: QuickRigCharacter_Head
+  - first:
+      1: 100128
+    second: QuickRigCharacter_Hips
+  - first:
+      1: 100130
+    second: QuickRigCharacter_LeftArm
+  - first:
+      1: 100132
+    second: QuickRigCharacter_LeftFoot
+  - first:
+      1: 100134
+    second: QuickRigCharacter_LeftForeArm
+  - first:
+      1: 100136
+    second: QuickRigCharacter_LeftHand
+  - first:
+      1: 100138
+    second: QuickRigCharacter_LeftLeg
+  - first:
+      1: 100140
+    second: QuickRigCharacter_LeftShoulder
+  - first:
+      1: 100142
+    second: QuickRigCharacter_LeftToeBase
+  - first:
+      1: 100144
+    second: QuickRigCharacter_LeftUpLeg
+  - first:
+      1: 100146
+    second: QuickRigCharacter_Neck
+  - first:
+      1: 100148
+    second: QuickRigCharacter_Reference
+  - first:
+      1: 100150
+    second: QuickRigCharacter_RightArm
+  - first:
+      1: 100152
+    second: QuickRigCharacter_RightFoot
+  - first:
+      1: 100154
+    second: QuickRigCharacter_RightForeArm
+  - first:
+      1: 100156
+    second: QuickRigCharacter_RightHand
+  - first:
+      1: 100158
+    second: QuickRigCharacter_RightLeg
+  - first:
+      1: 100160
+    second: QuickRigCharacter_RightShoulder
+  - first:
+      1: 100162
+    second: QuickRigCharacter_RightToeBase
+  - first:
+      1: 100164
+    second: QuickRigCharacter_RightUpLeg
+  - first:
+      1: 100166
+    second: QuickRigCharacter_Spine
+  - first:
+      1: 100168
+    second: QuickRigCharacter_Spine1
+  - first:
+      1: 100170
+    second: QuickRigCharacter_Spine2
+  - first:
+      1: 100172
+    second: Reference
+  - first:
+      1: 100174
+    second: RightArm
+  - first:
+      1: 100176
+    second: RightFoot
+  - first:
+      1: 100178
+    second: RightForeArm
+  - first:
+      1: 100180
+    second: RightHand
+  - first:
+      1: 100182
+    second: rightHead
+  - first:
+      1: 100184
+    second: RightLeg
+  - first:
+      1: 100186
+    second: RightShoulder
+  - first:
+      1: 100188
+    second: RightToeBase
+  - first:
+      1: 100190
+    second: RightUpLeg
+  - first:
+      1: 100192
+    second: Spine
+  - first:
+      1: 100194
+    second: Spine1
+  - first:
+      1: 100196
+    second: Spine2
+  - first:
+      1: 100198
+    second: wheel
+  - first:
+      4: 400000
+    second: Body1
+  - first:
+      4: 400002
+    second: Body:1
+  - first:
+      4: 400004
+    second: borderbody
+  - first:
+      4: 400006
+    second: Head
+  - first:
+      4: 400008
+    second: head1
+  - first:
+      4: 400010
+    second: head:1
+  - first:
+      4: 400012
+    second: Hips
+  - first:
+      4: 400014
+    second: innerbody
+  - first:
+      4: 400016
+    second: LeftArm
+  - first:
+      4: 400018
+    second: LeftFoot
+  - first:
+      4: 400020
+    second: LeftForeArm
+  - first:
+      4: 400022
+    second: LeftHand
+  - first:
+      4: 400024
+    second: leftHead
+  - first:
+      4: 400026
+    second: LeftLeg
+  - first:
+      4: 400028
+    second: LeftShoulder
+  - first:
+      4: 400030
+    second: LeftToeBase
+  - first:
+      4: 400032
+    second: LeftUpLeg
+  - first:
+      4: 400034
+    second: middleHead
+  - first:
+      4: 400036
+    second: Neck
+  - first:
+      4: 400038
+    second: //RootNode
+  - first:
+      4: 400040
+    second: POG_Character_v.0_forRig v8
+  - first:
+      4: 400042
+    second: QuickRigCharacter_Ctrl_ChestEndEffector
+  - first:
+      4: 400044
+    second: QuickRigCharacter_Ctrl_ChestOriginEffector
+  - first:
+      4: 400046
+    second: QuickRigCharacter_Ctrl_Head
+  - first:
+      4: 400048
+    second: QuickRigCharacter_Ctrl_HeadEffector
+  - first:
+      4: 400050
+    second: QuickRigCharacter_Ctrl_Hips
+  - first:
+      4: 400052
+    second: QuickRigCharacter_Ctrl_HipsEffector
+  - first:
+      4: 400054
+    second: QuickRigCharacter_Ctrl_LeftAnkleEffector
+  - first:
+      4: 400056
+    second: QuickRigCharacter_Ctrl_LeftArm
+  - first:
+      4: 400058
+    second: QuickRigCharacter_Ctrl_LeftElbowEffector
+  - first:
+      4: 400060
+    second: QuickRigCharacter_Ctrl_LeftFoot
+  - first:
+      4: 400062
+    second: QuickRigCharacter_Ctrl_LeftFootEffector
+  - first:
+      4: 400064
+    second: QuickRigCharacter_Ctrl_LeftForeArm
+  - first:
+      4: 400066
+    second: QuickRigCharacter_Ctrl_LeftHand
+  - first:
+      4: 400068
+    second: QuickRigCharacter_Ctrl_LeftHipEffector
+  - first:
+      4: 400070
+    second: QuickRigCharacter_Ctrl_LeftKneeEffector
+  - first:
+      4: 400072
+    second: QuickRigCharacter_Ctrl_LeftLeg
+  - first:
+      4: 400074
+    second: QuickRigCharacter_Ctrl_LeftShoulder
+  - first:
+      4: 400076
+    second: QuickRigCharacter_Ctrl_LeftShoulderEffector
+  - first:
+      4: 400078
+    second: QuickRigCharacter_Ctrl_LeftToeBase
+  - first:
+      4: 400080
+    second: QuickRigCharacter_Ctrl_LeftUpLeg
+  - first:
+      4: 400082
+    second: QuickRigCharacter_Ctrl_LeftWristEffector
+  - first:
+      4: 400084
+    second: QuickRigCharacter_Ctrl_Neck
+  - first:
+      4: 400086
+    second: QuickRigCharacter_Ctrl_Reference
+  - first:
+      4: 400088
+    second: QuickRigCharacter_Ctrl_RightAnkleEffector
+  - first:
+      4: 400090
+    second: QuickRigCharacter_Ctrl_RightArm
+  - first:
+      4: 400092
+    second: QuickRigCharacter_Ctrl_RightElbowEffector
+  - first:
+      4: 400094
+    second: QuickRigCharacter_Ctrl_RightFoot
+  - first:
+      4: 400096
+    second: QuickRigCharacter_Ctrl_RightFootEffector
+  - first:
+      4: 400098
+    second: QuickRigCharacter_Ctrl_RightForeArm
+  - first:
+      4: 400100
+    second: QuickRigCharacter_Ctrl_RightHand
+  - first:
+      4: 400102
+    second: QuickRigCharacter_Ctrl_RightHipEffector
+  - first:
+      4: 400104
+    second: QuickRigCharacter_Ctrl_RightKneeEffector
+  - first:
+      4: 400106
+    second: QuickRigCharacter_Ctrl_RightLeg
+  - first:
+      4: 400108
+    second: QuickRigCharacter_Ctrl_RightShoulder
+  - first:
+      4: 400110
+    second: QuickRigCharacter_Ctrl_RightShoulderEffector
+  - first:
+      4: 400112
+    second: QuickRigCharacter_Ctrl_RightToeBase
+  - first:
+      4: 400114
+    second: QuickRigCharacter_Ctrl_RightUpLeg
+  - first:
+      4: 400116
+    second: QuickRigCharacter_Ctrl_RightWristEffector
+  - first:
+      4: 400118
+    second: QuickRigCharacter_Ctrl_Spine
+  - first:
+      4: 400120
+    second: QuickRigCharacter_Ctrl_Spine1
+  - first:
+      4: 400122
+    second: QuickRigCharacter_Ctrl_Spine2
+  - first:
+      4: 400124
+    second: QuickRigCharacter_Guides
+  - first:
+      4: 400126
+    second: QuickRigCharacter_Head
+  - first:
+      4: 400128
+    second: QuickRigCharacter_Hips
+  - first:
+      4: 400130
+    second: QuickRigCharacter_LeftArm
+  - first:
+      4: 400132
+    second: QuickRigCharacter_LeftFoot
+  - first:
+      4: 400134
+    second: QuickRigCharacter_LeftForeArm
+  - first:
+      4: 400136
+    second: QuickRigCharacter_LeftHand
+  - first:
+      4: 400138
+    second: QuickRigCharacter_LeftLeg
+  - first:
+      4: 400140
+    second: QuickRigCharacter_LeftShoulder
+  - first:
+      4: 400142
+    second: QuickRigCharacter_LeftToeBase
+  - first:
+      4: 400144
+    second: QuickRigCharacter_LeftUpLeg
+  - first:
+      4: 400146
+    second: QuickRigCharacter_Neck
+  - first:
+      4: 400148
+    second: QuickRigCharacter_Reference
+  - first:
+      4: 400150
+    second: QuickRigCharacter_RightArm
+  - first:
+      4: 400152
+    second: QuickRigCharacter_RightFoot
+  - first:
+      4: 400154
+    second: QuickRigCharacter_RightForeArm
+  - first:
+      4: 400156
+    second: QuickRigCharacter_RightHand
+  - first:
+      4: 400158
+    second: QuickRigCharacter_RightLeg
+  - first:
+      4: 400160
+    second: QuickRigCharacter_RightShoulder
+  - first:
+      4: 400162
+    second: QuickRigCharacter_RightToeBase
+  - first:
+      4: 400164
+    second: QuickRigCharacter_RightUpLeg
+  - first:
+      4: 400166
+    second: QuickRigCharacter_Spine
+  - first:
+      4: 400168
+    second: QuickRigCharacter_Spine1
+  - first:
+      4: 400170
+    second: QuickRigCharacter_Spine2
+  - first:
+      4: 400172
+    second: Reference
+  - first:
+      4: 400174
+    second: RightArm
+  - first:
+      4: 400176
+    second: RightFoot
+  - first:
+      4: 400178
+    second: RightForeArm
+  - first:
+      4: 400180
+    second: RightHand
+  - first:
+      4: 400182
+    second: rightHead
+  - first:
+      4: 400184
+    second: RightLeg
+  - first:
+      4: 400186
+    second: RightShoulder
+  - first:
+      4: 400188
+    second: RightToeBase
+  - first:
+      4: 400190
+    second: RightUpLeg
+  - first:
+      4: 400192
+    second: Spine
+  - first:
+      4: 400194
+    second: Spine1
+  - first:
+      4: 400196
+    second: Spine2
+  - first:
+      4: 400198
+    second: wheel
+  - first:
+      21: 2100000
+    second: Default_Material
+  - first:
+      21: 2100002
+    second: Steel - Satin
+  - first:
+      21: 2100004
+    second: Aluminum - Bead Blasted
+  - first:
+      21: 2100006
+    second: ABS (White)
+  - first:
+      21: 2100008
+    second: ABS (White)_modified
+  - first:
+      43: 4300000
+    second: middleHead
+  - first:
+      43: 4300002
+    second: rightHead
+  - first:
+      43: 4300004
+    second: leftHead
+  - first:
+      43: 4300006
+    second: wheel
+  - first:
+      43: 4300008
+    second: borderbody
+  - first:
+      43: 4300010
+    second: innerbody
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: borderbody
+  - first:
+      137: 13700002
+    second: innerbody
+  - first:
+      137: 13700004
+    second: leftHead
+  - first:
+      137: 13700006
+    second: middleHead
+  - first:
+      137: 13700008
+    second: rightHead
+  - first:
+      137: 13700010
+    second: wheel
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -248,7 +684,7 @@ ModelImporter:
       name: Steel - Satin
     second: {fileID: 2100000, guid: a0197845eabf1429ea0fc587884bac7c, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -258,7 +694,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Avatar creation failed:\n\tCannot find root motion transform
+      'mixamorig:Hips'.\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -280,36 +717,98 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: POG_Character_v.0 v12(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POG_Character_v.0 v12
+      parentName: POG_Character_v.0 v12(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body:1
+      parentName: POG_Character_v.0 v12
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Body:1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body1
+      parentName: Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: Body2
+      parentName: Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: head:1
+      parentName: POG_Character_v.0 v12
+      position: {x: 0.0076587233, y: -0.011378674, z: 0}
+      rotation: {x: -9.7144515e-17, y: 2.696302e-33, z: -1.9428903e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: head:1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body2 1
+      parentName: head
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: Body6
+      parentName: head
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: Body7
+      parentName: head
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -317,14 +816,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    globalScale: 1
+    rootMotionBoneName: POG_Character_v.0_forRig v8
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

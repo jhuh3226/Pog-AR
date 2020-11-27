@@ -58,7 +58,7 @@ public class CanvasAppear : MonoBehaviour
 
         //Debug.Log("current time: " + currentTime + " fixed time: " + Time.fixedTime);
 
-        if (Time.fixedTime - currentTime >= 1.5 && currentTime > 0)
+        if (Time.fixedTime - currentTime >= 0.5 && currentTime > 0)
         {
             Debug.Log("enable AccidentPoint");
             enableCheckAccidentPoint = true;

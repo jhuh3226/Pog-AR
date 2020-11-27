@@ -7,8 +7,9 @@ public class SceneFoundCase1point2 : MonoBehaviour
     public GameObject gameObContainingScript;
     public GameObject eventSystem;
     public GameObject CanvasArrowImage;
-    
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
 
     public bool scriptTurnOnDone = false;
 
@@ -31,6 +32,7 @@ public class SceneFoundCase1point2 : MonoBehaviour
                 turnOnScripts();
 
                 scriptTurnOnDone = true;
+                CVGoBackQR.enabled = true;
             }
         }
     }

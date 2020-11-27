@@ -11,6 +11,8 @@ public class Case3SceneFound : MonoBehaviour
     //public GameObject CanvasArrow;
     //public GameObject CVAccidentDetail;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
 
     public bool scriptTurnOnDone = false;
 
@@ -31,6 +33,7 @@ public class Case3SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
                 //turn on gravity
                 POGCrossing.GetComponent<Rigidbody>().useGravity = true;

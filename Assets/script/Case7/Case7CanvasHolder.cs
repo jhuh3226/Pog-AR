@@ -11,6 +11,17 @@ public class Case7CanvasHolder : MonoBehaviour
     public GameObject CV3Text;
     public GameObject CV4Text;
     public GameObject CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     public GameObject CVArrow;
     public GameObject ArrowImage;
@@ -31,6 +42,24 @@ public class Case7CanvasHolder : MonoBehaviour
 
         Button btn2 = bt2.GetComponent<Button>();
         btn2.onClick.AddListener(TaskOnClickBT2);
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
     }
 
     // Update is called once per frame
@@ -63,7 +92,10 @@ public class Case7CanvasHolder : MonoBehaviour
             CV4Text.SetActive(false);
 
             //enable
-            CVMissionClear.GetComponent<Canvas>().enabled = true;
+            if (!btSeeMoreClicked)
+            {
+                CVMissionClear.GetComponent<Canvas>().enabled = true;
+            }
         }
     }
 
@@ -91,5 +123,46 @@ public class Case7CanvasHolder : MonoBehaviour
         CV3Text.GetComponent<Canvas>().enabled = true;
 
         bt2ClickedTime = Time.fixedTime;
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        btSeeMoreClicked = true;
+        CVMissionClear.SetActive(false);
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.SetActive(true);
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVBigData.enabled = false;
     }
 }

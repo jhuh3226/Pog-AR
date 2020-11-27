@@ -11,7 +11,7 @@ public class Case9CarRotate : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rotationSpeed = 10f;
+        rotationSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Case9CarRotate : MonoBehaviour
             transform.Rotate(-Vector3.forward * (rotationSpeed * Time.deltaTime));
             Debug.Log("Car rotate");
 
-            rotationSpeed = rotationSpeed + 0.5f;
+            rotationSpeed = rotationSpeed + 0.3f;
         }
 
     }

@@ -44,6 +44,6 @@ public class Case2p2ActivatePogBot2 : MonoBehaviour
             }
         }
 
-        Debug.Log("time now: " + m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        //Debug.Log("time now: " + m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
 }

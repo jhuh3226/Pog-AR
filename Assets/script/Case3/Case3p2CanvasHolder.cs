@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Case3p2CanvasHolder : MonoBehaviour
 {
@@ -12,6 +13,17 @@ public class Case3p2CanvasHolder : MonoBehaviour
     public GameObject Car;
 
     public Canvas CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     bool CVAccidentDetailOn;
     bool timeRecorded = false;
@@ -42,6 +54,24 @@ public class Case3p2CanvasHolder : MonoBehaviour
         //control button CheckAccidentPoint, when clicked inactivate CVAccidentHappened and activate CVAccidentDetail
         //Button btn1 = btCheckAccidentPoint.GetComponent<Button>();
         //btn1.onClick.AddListener(TaskOnClick1);
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
     }
 
     // Update is called once per frame
@@ -103,7 +133,10 @@ public class Case3p2CanvasHolder : MonoBehaviour
         {
             if (timeRecorded == true)
             {
-                CVMissionClear.enabled = true;
+                if (!btSeeMoreClicked)
+                {
+                    CVMissionClear.enabled = true;
+                }
             }
             CV2.enabled = false;
         }
@@ -118,5 +151,46 @@ public class Case3p2CanvasHolder : MonoBehaviour
 
         //CVAccidentDetailOn = true;
 
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        btSeeMoreClicked = true;
+        CVMissionClear.enabled = false;
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.enabled = true;
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVBigData.enabled = false;
     }
 }

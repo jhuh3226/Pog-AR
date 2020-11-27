@@ -10,6 +10,9 @@ public class Case2p2SceneFound : MonoBehaviour
     public GameObject Car;
     public GameObject eventSystem;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
     public bool scriptTurnOnDone = false;
 
     // Start is called before the first frame update
@@ -29,6 +32,7 @@ public class Case2p2SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
                 scriptTurnOnDone = true;
             }

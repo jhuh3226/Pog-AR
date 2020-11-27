@@ -11,6 +11,9 @@ public class Case5SceneFound : MonoBehaviour
     //public GameObject CanvasArrow;
     //public GameObject CV1;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
 
     public bool scriptTurnOnDone = false;
 
@@ -31,6 +34,7 @@ public class Case5SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
                 scriptTurnOnDone = true;
             }

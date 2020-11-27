@@ -17,6 +17,17 @@ public class Case5p2CanvasHolder : MonoBehaviour
     public GameObject CVArrowLeftText2;
     public GameObject CVArrowLeftText3;
     public GameObject CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     public GameObject car;
     public GameObject pogBotCrossing;
@@ -37,6 +48,24 @@ public class Case5p2CanvasHolder : MonoBehaviour
     {
         Button btn1 = bt1.GetComponent<Button>();
         btn1.onClick.AddListener(TaskOnClick1);
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
     }
 
     // Update is called once per frame
@@ -100,11 +129,15 @@ public class Case5p2CanvasHolder : MonoBehaviour
         //if time passed 2, enable missionClear 
         if (CVArrowLeftText2OnTime != 0 && Time.fixedTime - CVArrowLeftText2OnTime >= 3)
         {
+
             //inactivate
             CVArrowLeftText3.SetActive(false);
 
-            //activate
-            CVMissionClear.GetComponent<Canvas>().enabled = true;
+            if (!btSeeMoreClicked)
+            {
+                //activate
+                CVMissionClear.GetComponent<Canvas>().enabled = true;
+            }
         }
     }
 
@@ -123,5 +156,46 @@ public class Case5p2CanvasHolder : MonoBehaviour
 
         //bool sending to case5p2AnimationHolder
         startAnimating = true;
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        btSeeMoreClicked = true;
+        CVMissionClear.SetActive(false);
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.SetActive(true);
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVBigData.enabled = false;
     }
 }

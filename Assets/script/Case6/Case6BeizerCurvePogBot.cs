@@ -13,10 +13,11 @@ public class Case6BeizerCurvePogBot : MonoBehaviour
 
     private Vector3 busPosition;
 
-    private float speedModifier;
+    public float speedModifier;
 
     private bool coroutineAllowed;
 
+    public bool pogBotPassedPoint1;
     public bool pogBotPassedPoint2;
     public bool pogBotPassedPoint3;
 
@@ -34,7 +35,7 @@ public class Case6BeizerCurvePogBot : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.37f;
+        //speedModifier = 0.37f;
         coroutineAllowed = true;
 
         pogBotPassedPoint2 = false;
@@ -77,6 +78,13 @@ public class Case6BeizerCurvePogBot : MonoBehaviour
 
                 transform.localPosition = busPosition;
             //}
+
+
+            //stop the pogbot
+            if (transform.localPosition.x > p1.x)
+            {
+                pogBotPassedPoint1 = true;
+            }
 
             //stop the pogbot
             if (transform.localPosition.x > p2.x)

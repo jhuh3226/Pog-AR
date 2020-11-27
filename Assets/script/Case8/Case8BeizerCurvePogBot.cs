@@ -109,6 +109,9 @@ public class Case8BeizerCurvePogBot : MonoBehaviour
             Debug.Log("crashed with car");
             stopBeizerCurve = true;
 
+            //turn on gravity
+            this.GetComponent<Rigidbody>().useGravity = true;
+
             //on crash, pogbot position change to -2 for short time 30/8/0.7
             //this.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -1.8f);
 

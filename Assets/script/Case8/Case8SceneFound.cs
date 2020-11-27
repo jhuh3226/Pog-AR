@@ -8,6 +8,9 @@ public class Case8SceneFound : MonoBehaviour
     public GameObject POGCrossing;
     public GameObject car;
 
+    //canvas back QR
+    public Canvas CVGoBackQR;
+
     public bool scriptTurnOnDone = false;
 
     // Start is called before the first frame update
@@ -27,9 +30,10 @@ public class Case8SceneFound : MonoBehaviour
             if (scriptTurnOnDone == false)
             {
                 turnOnScripts();
+                CVGoBackQR.enabled = true;
 
-                //turn on gravity
-                POGCrossing.GetComponent<Rigidbody>().useGravity = true;
+                ////turn on gravity
+                //POGCrossing.GetComponent<Rigidbody>().useGravity = true;
 
                 scriptTurnOnDone = true;
             }

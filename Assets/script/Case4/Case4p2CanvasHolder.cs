@@ -15,7 +15,18 @@ public class Case4p2CanvasHolder : MonoBehaviour
     public GameObject CVArrowLeftText;
     public GameObject CVArrowLeftText2;
     public GameObject CVArrowLeftText3;
-    public GameObject CVMissionClear;
+    public Canvas CVMissionClear;
+    public Canvas CVUiBT;
+    public Canvas CVAcciDetail;
+    public Canvas CVBigData;
+
+    public Button btSeeMore;
+    public Button btSeeMoreCancel;
+    bool btSeeMoreClicked = false;
+    public Button btAcciDetail;
+    public Button btAcciDetailCancel;
+    public Button btBigData;
+    public Button btBigDataCancel;
 
     //used in update
     public GameObject gameObCase4Blink;
@@ -37,6 +48,24 @@ public class Case4p2CanvasHolder : MonoBehaviour
     {
         Button btn1 = bt1.GetComponent<Button>();
         btn1.onClick.AddListener(TaskOnClick1);
+
+        //UI buttons
+        //bt acci detail
+        Button btnSeeMore = btSeeMore.GetComponent<Button>();
+        btnSeeMore.onClick.AddListener(TaskOnClickBtnSeeMore);
+        Button btnSeeMoreCancel = btSeeMoreCancel.GetComponent<Button>();
+        btnSeeMoreCancel.onClick.AddListener(TaskOnClickBtnSeeMoreCancel);
+
+
+        Button btnAcciDetail = btAcciDetail.GetComponent<Button>();
+        btnAcciDetail.onClick.AddListener(TaskOnClickBtnAcciDetail);
+        Button btnAcciDetailCancel = btAcciDetailCancel.GetComponent<Button>();
+        btAcciDetailCancel.onClick.AddListener(TaskOnClickBtnAcciDetailCancel);
+
+        Button btnBigData = btBigData.GetComponent<Button>();
+        btnBigData.onClick.AddListener(TaskOnClickBtnBigData);
+        Button btnBigDataCancel = btBigDataCancel.GetComponent<Button>();
+        btnBigDataCancel.onClick.AddListener(TaskOnClickBtnBigDataCancel);
 
     }
 
@@ -84,8 +113,11 @@ public class Case4p2CanvasHolder : MonoBehaviour
         //if time passed _, turn off CVArrowLeftText3 and turn on CVArrowLeftText3
         if(CVArrowLeftText3On != 0 && Time.fixedTime - CVArrowLeftText3On >= 2)
         {
-            CVArrowLeftText3.GetComponent<Canvas>().enabled = false;
-            CVMissionClear.GetComponent<Canvas>().enabled = true;
+            if (!btSeeMoreClicked)
+            {
+                CVArrowLeftText3.GetComponent<Canvas>().enabled = false;
+                CVMissionClear.GetComponent<Canvas>().enabled = true;
+            }
         }
     }
 
@@ -107,5 +139,49 @@ public class Case4p2CanvasHolder : MonoBehaviour
             //turn on animation "look left loop"
             startAnimating = true;
         }
+    }
+
+    void TaskOnClickBtnSeeMore()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVArrowLeftText3.GetComponent<Canvas>().enabled = false;
+        CVArrowLeftText3.SetActive(false);
+
+        btSeeMoreClicked = true;
+        CVMissionClear.enabled = false;
+        CVUiBT.enabled = true;
+    }
+
+    void TaskOnClickBtnSeeMoreCancel()
+    {
+        CVMissionClear.enabled = true;
+        CVUiBT.enabled = false;
+    }
+
+    void TaskOnClickBtnAcciDetail()
+    {
+        print("bt AcciDetail Clicked");
+
+        CVUiBT.enabled = false;
+        CVAcciDetail.enabled = true;
+    }
+    void TaskOnClickBtnAcciDetailCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVAcciDetail.enabled = false;
+    }
+
+    void TaskOnClickBtnBigData()
+    {
+        CVUiBT.enabled = false;
+        CVBigData.enabled = true;
+    }
+    void TaskOnClickBtnBigDataCancel()
+    {
+
+        CVUiBT.enabled = true;
+        CVBigData.enabled = false;
     }
 }

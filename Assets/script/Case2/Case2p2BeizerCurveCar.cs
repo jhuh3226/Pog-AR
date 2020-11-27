@@ -96,7 +96,7 @@ public class Case2p2BeizerCurveCar : MonoBehaviour
             }
 
             //if (transform.localPosition.x < p2.x)
-            if (transform.localPosition.x < 5f)
+            if (transform.localPosition.x < p2.x)
             {
                 vehiclePassedPoint2 = true;
                 Debug.Log("PogBot passed last point");

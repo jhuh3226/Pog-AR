@@ -37,7 +37,7 @@ public class Case2SceneFound : MonoBehaviour
                 CVGoBackQR.enabled = true;
 
                 //turn on gravity
-                POGCrossing.GetComponent<Rigidbody>().useGravity = true;
+                //POGCrossing.GetComponent<Rigidbody>().useGravity = true;
 
                 scriptTurnOnDone = true;
             }

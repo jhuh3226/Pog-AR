@@ -72,13 +72,13 @@ public class Case10p2BeizerCurveCar : MonoBehaviour
             }
 
             //stop rotating car if x goes over p2.x
-            if (transform.localPosition.y > p2.y)
+            if (transform.localPosition.y < p2.y)
             {
                 vehiclePassedPoint2 = true;
             }
 
             //stop the car
-            if (transform.localPosition.y > p3.y)
+            if (transform.localPosition.y < p3.y)
             {
                 vehiclePassedPoint3 = true;
                 Debug.Log("PogBot passed last point");

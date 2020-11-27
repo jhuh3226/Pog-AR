@@ -23,6 +23,8 @@ public class Case2BeizerCurvePogBot : MonoBehaviour
 
     public bool pogBotPassedPoint3;
 
+    public GameObject plain;
+
     //collider
     bool stopBeizerCurve = false;
     //sound
@@ -98,6 +100,9 @@ public class Case2BeizerCurvePogBot : MonoBehaviour
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "car")
         {
+            this.GetComponent<Rigidbody>().useGravity = true;
+            plain.SetActive(true);
+
             Debug.Log("crashed with car");
             stopBeizerCurve = true;
 

@@ -21,8 +21,10 @@ class Runner : MonoBehaviour
             var a = i.GetWorldLine();
             if (counter < a.Count)
             {
-                ball.transform.position = new Vector3((a[counter].x - a[0].x) * 3.8f + a[0].x, a[counter].y, a[counter].z);
-                counter += 3;
+                float newX = a[counter].x - a[0].x + a[0].x + 3.0f;
+                float newY = a[counter].y - a[0].y + a[0].y + 2.0f;
+                ball.transform.position = new Vector3(newX, newY, a[counter].z);
+                counter += 5;
             }
             else
             {

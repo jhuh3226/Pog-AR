@@ -3431,7 +3431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &692992606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7684,8 +7684,8 @@ GameObject:
   - component: {fileID: 1539165309}
   - component: {fileID: 1539165308}
   - component: {fileID: 1539165307}
-  - component: {fileID: 1539165306}
   - component: {fileID: 1539165311}
+  - component: {fileID: 1539165312}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7693,35 +7693,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1539165306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539165305}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caa6e85be611f441c9d8176df70bd3ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  car: {fileID: 692992605}
-  carPoint0: {fileID: 1856781690}
-  carPoint1: {fileID: 522866352}
-  carPoint2: {fileID: 529978899}
-  carPoint3: {fileID: 1259950034}
-  carXAdjustValue: 7.5
-  carYAdjustValue: 1.8
-  pogBot: {fileID: 862020744}
-  pogPoint0: {fileID: 1772164285}
-  pogPoint1: {fileID: 359522097}
-  pogPoint2: {fileID: 1250535148}
-  pogPoint3: {fileID: 2101175242}
-  pogXAdjustValue: 0
-  pogYAdjustValue: 0
-  pogZAdjustValue: -2.5
-  runnerDone: 0
 --- !u!114 &1539165307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7799,6 +7770,35 @@ MonoBehaviour:
   CVStartRunner: {fileID: 456561858}
   newCar: {fileID: 692992605}
   gameObRunner: {fileID: 1539165305}
+--- !u!114 &1539165312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539165305}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae29e548771240a9a20e18d052dadfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  car: {fileID: 692992605}
+  carPoint0: {fileID: 1856781690}
+  carPoint1: {fileID: 522866352}
+  carPoint2: {fileID: 529978899}
+  carPoint3: {fileID: 1259950034}
+  carXAdjustValue: 7.5
+  carYAdjustValue: 1.8
+  pogBot: {fileID: 862020744}
+  pogPoint0: {fileID: 1772164285}
+  pogPoint1: {fileID: 359522097}
+  pogPoint2: {fileID: 1250535148}
+  pogPoint3: {fileID: 2101175242}
+  pogXAdjustValue: 0
+  pogYAdjustValue: 0
+  pogZAdjustValue: -2.5
+  runnerDone: 0
 --- !u!1 &1578703663
 GameObject:
   m_ObjectHideFlags: 0

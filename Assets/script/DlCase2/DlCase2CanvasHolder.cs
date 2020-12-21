@@ -29,7 +29,7 @@ public class DlCase2CanvasHolder : MonoBehaviour
     void Update()
     {
         // move car according to the beizercurve only after deeplearning
-        Runner runner = gameObRunner.GetComponent<Runner>();
+        DlCase2Runner runner = gameObRunner.GetComponent<DlCase2Runner>();
         if(runner.runnerDone)
         {
             newCar.GetComponent<DlCase2BeizerCurveCar>().enabled = true;
@@ -44,6 +44,6 @@ public class DlCase2CanvasHolder : MonoBehaviour
         CVStartRunner.enabled = false;
 
         // enable runner script
-        eventSystem.GetComponent<Runner>().enabled = true;
+        eventSystem.GetComponent<DlCase2Runner>().enabled = true;
     }
 }

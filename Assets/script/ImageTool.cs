@@ -74,34 +74,34 @@ namespace DLTool
 
       Dictionary<int, int> line = new Dictionary<int, int>();
 
-      StreamWriter writer = new StreamWriter("./line.txt", true);
+      // StreamWriter writer = new StreamWriter("./line.txt", true);
       foreach (int key in res.Keys)
       {
-        writer.Write("y: ");
-        writer.Write(key);
-        writer.Write(", ");
-        writer.Write("x: (");
-        writer.Write(res[key].Item1);
-        writer.Write(", ");
-        writer.Write(res[key].Item2);
-        writer.Write(")\n");        
+        // writer.Write("y: ");
+        // writer.Write(key);
+        // writer.Write(", ");
+        // writer.Write("x: (");
+        // writer.Write(res[key].Item1);
+        // writer.Write(", ");
+        // writer.Write(res[key].Item2);
+        // writer.Write(")\n");        
 
         var point = (float)res[key].Item1 * (1.0f - ratio) + (float)res[key].Item2 * ratio;
 
         line.Add(key, (int)point);
       }
-      writer.Close();
+      // writer.Close();
 
-      writer = new StreamWriter("./test.txt", true);
-      foreach (int key in line.Keys) {
-        writer.Write("x: ");
-        writer.Write(key);
-        writer.Write(", ");
-        writer.Write("y: ");
-        writer.Write(line[key]);
-        writer.Write("\n");
-      }
-      writer.Close();
+      // writer = new StreamWriter("./test.txt", true);
+      // foreach (int key in line.Keys) {
+      //   writer.Write("x: ");
+      //   writer.Write(key);
+      //   writer.Write(", ");
+      //   writer.Write("y: ");
+      //   writer.Write(line[key]);
+      //   writer.Write("\n");
+      // }
+      // writer.Close();
 
       return line;
     }
@@ -114,7 +114,7 @@ namespace DLTool
       {
         int y = line[x];
 
-        res.Add(DlCase2Runner.cam.ScreenToWorldPoint(new Vector3(x, y, 1.0f)));
+        res.Add(DlCase2Runner.cam.ScreenToWorldPoint(new Vector3(x, y, 10.0f)));
       }
 
       return res;

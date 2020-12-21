@@ -137,22 +137,21 @@ namespace DLTool {
             {
                 if (mAccessCameraImage)
                 {
-                    // Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
-                    // ORIGINAL_WIDTH = image.Width;
-                    // ORIGINAL_HEIGHT = image.Height;
-                    // if (image != null)
-                    // {
+                    Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
+                    ORIGINAL_WIDTH = image.Width;
+                    ORIGINAL_HEIGHT = image.Height;
+                    if (image != null)
+                    {
                         if (counter == 100)
                         {
-                            //Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
-                            //image.CopyToTexture(texture);
-                            ORIGINAL_WIDTH = textureMap.width;
-                            ORIGINAL_HEIGHT = textureMap.height;
-                            Debug.Log(ORIGINAL_WIDTH);
-                            Debug.Log(ORIGINAL_HEIGHT);
+                            Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
+                            image.CopyToTexture(texture);
+                            texture = ImageTool.ScaleTexture(texture, IMAGE_WIDTH, IMAGE_HEIGHT);
+                            // ORIGINAL_WIDTH = textureMap.width;
+                            // ORIGINAL_HEIGHT = textureMap.height;
 
-                            Texture2D texture = new Texture2D(textureMap.width, textureMap.height, TextureFormat.RGBA32, false);
-                            texture = ImageTool.ScaleTexture(textureMap, IMAGE_WIDTH, IMAGE_HEIGHT);
+                            // Texture2D texture = new Texture2D(textureMap.width, textureMap.height, TextureFormat.RGBA32, false);
+                            // texture = ImageTool.ScaleTexture(textureMap, IMAGE_WIDTH, IMAGE_HEIGHT);
                             Color32[] pixels = texture.GetPixels32();
                             Detection model = new Detection();
                             Texture2D result = model.Segmentation(pixels);
@@ -170,7 +169,7 @@ namespace DLTool {
                             // }
                             // writer.Close();
                             result = ImageTool.ScaleTexture(result, ORIGINAL_WIDTH, ORIGINAL_HEIGHT);
-                            Dictionary<int, int> line = ImageTool.GetLine(result, 'y', 0.5f);
+                            Dictionary<int, int> line = ImageTool.GetLine(result, 'x', 0.5f);
                             // StreamWriter writer1 = new StreamWriter("./indices.txt", true);
                             List<Vector3> WorldPoints = ImageTool.GetWorldPoints(line);
                             // StreamWriter writer = new StreamWriter("./test.txt", true);
@@ -193,7 +192,7 @@ namespace DLTool {
                         {
                         counter += 1;
                         }
-                    // }
+                    }
                 }
             }
         }

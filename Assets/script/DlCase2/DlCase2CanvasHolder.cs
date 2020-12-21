@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DLTool;
 
 public class DlCase2CanvasHolder : MonoBehaviour
 
@@ -29,7 +30,7 @@ public class DlCase2CanvasHolder : MonoBehaviour
     void Update()
     {
         // move car according to the beizercurve only after deeplearning
-        DlCase2Runner runner = gameObRunner.GetComponent<DlCase2Runner>();
+        DLTool.DlCase2Runner runner = gameObRunner.GetComponent<DLTool.DlCase2Runner>();
         if(runner.runnerDone)
         {
             newCar.GetComponent<DlCase2BeizerCurveCar>().enabled = true;
@@ -44,6 +45,6 @@ public class DlCase2CanvasHolder : MonoBehaviour
         CVStartRunner.enabled = false;
 
         // enable runner script
-        eventSystem.GetComponent<DlCase2Runner>().enabled = true;
+        eventSystem.GetComponent<DLTool.DlCase2Runner>().enabled = true;
     }
 }

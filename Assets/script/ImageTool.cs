@@ -1,63 +1,15 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Vuforia;
 using System;
-using Detection;
 using System.IO;
 
-namespace ImageTool
+
+namespace DLTool
 {
-  public class ImageTool : MonoBehaviour
+  public class ImageTool  
   {
-        // modified
-        public Texture2D textureMap;
-
-        // init pixel format
-        private PIXEL_FORMAT mPixelFormat = PIXEL_FORMAT.UNKNOWN_FORMAT;
-    private bool mAccessCameraImage = true;
-    private bool mFormatRegistered = false;
-    private int ORIGINAL_WIDTH;
-    private int ORIGINAL_HEIGHT;
-    public const int IMAGE_WIDTH = 256;
-    public const int IMAGE_HEIGHT = 320;
-
-    List<Vector3> WorldLine;
-    public bool isDone = false;
-
-    private Camera cam;
-    private int counter;
-
-    // initially run
-    public void init()
-    {
-      // set candidate pixel format
-      mPixelFormat = PIXEL_FORMAT.RGBA8888;
-      // Register Vuforia life-cycle callbacks:
-      VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
-      VuforiaARController.Instance.RegisterTrackablesUpdatedCallback(OnTrackablesUpdated);
-      cam = Camera.main;
-    }
-
-    void OnVuforiaStarted()
-    {
-      // set image format
-      if (CameraDevice.Instance.SetFrameFormat(mPixelFormat, true))
-      {
-        Debug.Log("Successfully registered pixel format " + mPixelFormat.ToString());
-        mFormatRegistered = true;
-      }
-      else
-      {
-        Debug.LogError(
-            "\nFailed to register pixel format: " + mPixelFormat.ToString() +
-            "\nThe format may be unsupported by your device." +
-            "\nConsider using a different pixel format.\n");
-        mFormatRegistered = false;
-      }
-    }
-
-    Texture2D ScaleTexture(Texture2D source, int targetWidth, int targetHeight)
+    public static Texture2D ScaleTexture(Texture2D source, int targetWidth, int targetHeight)
     {
       Texture2D result = new Texture2D(targetWidth, targetHeight, source.format, true);
       Color[] rpixels = result.GetPixels(0);
@@ -72,45 +24,49 @@ namespace ImageTool
       return result;
     }
 
-    // public Texture2D FlipTexture(Texture2D original)
-    // {
-    //   Texture2D flipped = new Texture2D(original.height, original.width);
-
-    //   int xN = original.width;
-    //   int yN = original.height;
-
-    //   for (int i = 0; i < xN; i++)
-    //   {
-    //     for (int j = 0; j < yN; j++)
-    //     {
-    //       flipped.SetPixel(j, i, original.GetPixel(i, j));
-    //     }
-    //   }
-
-    //   flipped.Apply();
-
-    //   return flipped;
-    // }
-
-    public Dictionary<int, int> GetLine(Texture2D texture)
+    public static Dictionary<int, int> GetLine(Texture2D texture, char axis, float ratio)
     {
-      Dictionary<int, List<int>> res = new Dictionary<int, List<int>>();
+      Dictionary<int, (int min, int max)> res = new Dictionary<int, (int min, int max)>();
 
-      for (int i = 0; i < texture.width; ++i)
-      {
+      if (axis == 'y') {
         for (int j = 0; j < texture.height; ++j)
         {
-          if (texture.GetPixel(i, j).r > 0.5)
+          for (int i = 0; i < texture.width; ++i)
           {
-            if (!res.ContainsKey(i))
+            if (texture.GetPixel(i, j).r > 0.5)
             {
-              res.Add(i, new List<int> { j });
+              if (!res.ContainsKey(j))
+              {
+                res.Add(j, (i, i));
+              }
+              else
+              {
+                int min = res[j].Item1 > i ? i : res[j].Item1;
+                int max = res[j].Item2 < i ? i : res[j].Item2;
+                var newT = (min, max);
+                res[j] = newT;
+              }
             }
-            else
+          }
+        }
+      } else {  // axis == 'x'
+        for (int i = 0; i < texture.width; ++i)
+        {
+          for (int j = 0; j < texture.height; ++j)
+          {
+            if (texture.GetPixel(i, j).r > 0.5)
             {
-              var ys = res[i];
-              ys.Add(j);
-              res[i] = ys;
+              if (!res.ContainsKey(i))
+              {
+                res.Add(i, (j, j));
+              }
+              else
+              {
+                int min = res[i].Item1 > j ? j : res[i].Item1;
+                int max = res[i].Item2 < j ? j : res[i].Item2;
+                var newT = (min, max);
+                res[i] = newT;
+              }
             }
           }
         }
@@ -118,23 +74,39 @@ namespace ImageTool
 
       Dictionary<int, int> line = new Dictionary<int, int>();
 
+      StreamWriter writer = new StreamWriter("./line.txt", true);
       foreach (int key in res.Keys)
       {
-        var ys = res[key];
+        writer.Write("y: ");
+        writer.Write(key);
+        writer.Write(", ");
+        writer.Write("x: (");
+        writer.Write(res[key].Item1);
+        writer.Write(", ");
+        writer.Write(res[key].Item2);
+        writer.Write(")\n");        
 
-        int sum = 0;
-        for (int i = 0; i < ys.Count; ++i)
-        {
-          sum += ys[i];
-        }
+        var point = (float)res[key].Item1 * (1.0f - ratio) + (float)res[key].Item2 * ratio;
 
-        line.Add(key, sum / ys.Count);
+        line.Add(key, (int)point);
       }
+      writer.Close();
+
+      writer = new StreamWriter("./test.txt", true);
+      foreach (int key in line.Keys) {
+        writer.Write("x: ");
+        writer.Write(key);
+        writer.Write(", ");
+        writer.Write("y: ");
+        writer.Write(line[key]);
+        writer.Write("\n");
+      }
+      writer.Close();
 
       return line;
     }
 
-    public List<Vector3> GetWorldPoints(Dictionary<int, int> line)
+    public static List<Vector3> GetWorldPoints(Dictionary<int, int> line)
     {
       List<Vector3> res = new List<Vector3>();
 
@@ -142,80 +114,10 @@ namespace ImageTool
       {
         int y = line[x];
 
-        res.Add(cam.ScreenToWorldPoint(new Vector3(x, y, 10.0f)));
+        res.Add(DlCase2Runner.cam.ScreenToWorldPoint(new Vector3(x, y, 1.0f)));
       }
 
       return res;
     }
-
-    public List<Vector3> GetWorldLine()
-    {
-      return this.WorldLine;
-    }
-
-    public void OnTrackablesUpdated()
-    // public void GetWorldLine()
-    {
-      if (mFormatRegistered)
-      {
-        if (mAccessCameraImage)
-        {
-          //Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
-          //ORIGINAL_WIDTH = image.Width;
-          //ORIGINAL_HEIGHT = image.Height;
-          //if (image != null)
-          //{
-            if (counter == 100)
-            {
-                        //Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
-                        //image.CopyToTexture(texture);
-                        Debug.Log("textureMap.height" + textureMap.height);
-
-                        Texture2D texture = new Texture2D(textureMap.width, textureMap.height, TextureFormat.RGBA32, false);
-                            texture = ScaleTexture(textureMap, IMAGE_WIDTH, IMAGE_HEIGHT);
-              Color32[] pixels = texture.GetPixels32();
-              Detection.Detection model = new Detection.Detection();
-              Texture2D result = model.Segmentation(pixels);
-              // result = FlipTexture(result);
-              // StreamWriter writer = new StreamWriter("./test.txt", true);
-              // for (int i = 0; i < result.width; ++i)
-              // {
-              //   for (int j = 0; j < result.height; ++j)
-              //   {
-              //     Color a = result.GetPixel(i, j);
-              //     int r = a.r > 0.5 ? 1 : 0;
-              //     writer.Write(r);
-              //   }
-              //   writer.Write('\n');
-              // }
-              // writer.Close();
-              result = ScaleTexture(result, ORIGINAL_WIDTH, ORIGINAL_HEIGHT);
-              Dictionary<int, int> line = GetLine(result);
-              // StreamWriter writer1 = new StreamWriter("./indices.txt", true);
-              List<Vector3> WorldPoints = GetWorldPoints(line);
-              // StreamWriter writer = new StreamWriter("./test.txt", true);
-
-              // for (int i = 0; i < WorldPoints.Count; ++i)
-              // {
-              //   writer.Write("x: ");
-              //   writer.Write(WorldPoints[i].x);
-              //   writer.Write(",");
-              //   writer.Write("y: ");
-              //   writer.Write(WorldPoints[i].y);
-              //   writer.Write("\n");
-              // }
-              // writer.Close();
-              this.WorldLine = WorldPoints;
-              mAccessCameraImage = false;
-              isDone = true;
-            }
-            else
-            {
-              counter += 1;
-            }
-          }
-        }
-      }
-    }
   }
-//}
+}

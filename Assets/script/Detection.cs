@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Detection
+namespace DLTool
 {
   public class Detection
   {
@@ -56,6 +56,19 @@ namespace Detection
 
         byte[] _bytes = tex.EncodeToPNG();
         System.IO.File.WriteAllBytes("./test.png", _bytes);
+
+        // Color32 white = new Color32(255, 255, 255, 255);
+        // Color32 black = new Color32(0, 0, 0, 0);
+
+        // for (int i = 0; i < tex.width; ++i) {
+        //   for (int j = 0; j < tex.height; ++j) {
+        //     if (j >= 40 && j <= 100) {
+        //       tex.SetPixel(i, j, white);
+        //     } else {
+        //       tex.SetPixel(i, j, black);
+        //     }
+        //   }
+        // }
 
         return tex;
       }

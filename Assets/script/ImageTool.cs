@@ -8,10 +8,13 @@ using System.IO;
 
 namespace ImageTool
 {
-  public class ImageTool
+  public class ImageTool : MonoBehaviour
   {
-    // init pixel format
-    private PIXEL_FORMAT mPixelFormat = PIXEL_FORMAT.UNKNOWN_FORMAT;
+        // modified
+        public Texture2D textureMap;
+
+        // init pixel format
+        private PIXEL_FORMAT mPixelFormat = PIXEL_FORMAT.UNKNOWN_FORMAT;
     private bool mAccessCameraImage = true;
     private bool mFormatRegistered = false;
     private int ORIGINAL_WIDTH;
@@ -157,16 +160,19 @@ namespace ImageTool
       {
         if (mAccessCameraImage)
         {
-          Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
-          ORIGINAL_WIDTH = image.Width;
-          ORIGINAL_HEIGHT = image.Height;
-          if (image != null)
-          {
+          //Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
+          //ORIGINAL_WIDTH = image.Width;
+          //ORIGINAL_HEIGHT = image.Height;
+          //if (image != null)
+          //{
             if (counter == 100)
             {
-              Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
-              image.CopyToTexture(texture);
-              texture = ScaleTexture(texture, IMAGE_WIDTH, IMAGE_HEIGHT);
+                        //Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
+                        //image.CopyToTexture(texture);
+                        Debug.Log("textureMap.height" + textureMap.height);
+
+                        Texture2D texture = new Texture2D(textureMap.width, textureMap.height, TextureFormat.RGBA32, false);
+                            texture = ScaleTexture(textureMap, IMAGE_WIDTH, IMAGE_HEIGHT);
               Color32[] pixels = texture.GetPixels32();
               Detection.Detection model = new Detection.Detection();
               Texture2D result = model.Segmentation(pixels);
@@ -212,4 +218,4 @@ namespace ImageTool
       }
     }
   }
-}
+//}

@@ -1450,7 +1450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &289579163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12, y: 0.3, z: 10}
+  m_Size: {x: 20, y: 0.3, z: 20}
   m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!64 &289579164
 MeshCollider:
@@ -1720,7 +1720,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint1
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2530,7 +2530,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint1
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2591,7 +2591,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3970,6 +3970,7 @@ GameObject:
   - component: {fileID: 862020748}
   - component: {fileID: 862020747}
   - component: {fileID: 862020746}
+  - component: {fileID: 862020745}
   m_Layer: 0
   m_Name: POGBot
   m_TagString: Untagged
@@ -3977,6 +3978,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &862020745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862020744}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf3a8e5b994c41e3b1f21a887afc9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routes:
+  - {fileID: 611045439}
+  speedModifier: 0.3
+  rotationSpeed: 0
+  pogBotPassedPoint1: 0
+  pogBotPassedPoint3: 0
+  crashedTime: 0
 --- !u!65 &862020746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5816,7 +5836,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5907,7 +5927,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7769,6 +7789,7 @@ MonoBehaviour:
   eventSystem: {fileID: 1539165305}
   CVStartRunner: {fileID: 456561858}
   newCar: {fileID: 692992605}
+  pogBot: {fileID: 862020744}
   gameObRunner: {fileID: 1539165305}
 --- !u!114 &1539165312
 MonoBehaviour:
@@ -7788,16 +7809,23 @@ MonoBehaviour:
   carPoint1: {fileID: 522866352}
   carPoint2: {fileID: 529978899}
   carPoint3: {fileID: 1259950034}
-  carXAdjustValue: 7.5
-  carYAdjustValue: 1.8
+  carStartXAdjustValue: 1.3
+  carStartYAdjustValue: 6
+  carStartZAdjustValue: 0
+  carLastXAdjustValue: -4.5
+  carLastYAdjustValue: 0
+  carLastZAdjustValue: 0
   pogBot: {fileID: 862020744}
   pogPoint0: {fileID: 1772164285}
   pogPoint1: {fileID: 359522097}
   pogPoint2: {fileID: 1250535148}
   pogPoint3: {fileID: 2101175242}
-  pogXAdjustValue: 0
-  pogYAdjustValue: 0
-  pogZAdjustValue: -2.5
+  pogStartXAdjustValue: 0.23
+  pogStartYAdjustValue: 0
+  pogStartZAdjustValue: -0.5
+  pogLastXAdjustValue: -0.4
+  pogLastYAdjustValue: 12
+  pogLastZAdjustValue: 4.7
   runnerDone: 0
   textureMap: {fileID: 2800000, guid: 9f12ca67f22fb41328e84c04883344d1, type: 3}
   a: []
@@ -8595,7 +8623,7 @@ RectTransform:
   m_GameObject: {fileID: 1748772175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 2, z: 1}
+  m_LocalScale: {x: 4.2, y: 2.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1706484920}
   m_RootOrder: 0
@@ -8847,7 +8875,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint0
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9343,7 +9371,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint0
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10501,7 +10529,7 @@ GameObject:
   m_Layer: 0
   m_Name: ControlPoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

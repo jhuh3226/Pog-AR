@@ -28,17 +28,24 @@ namespace DLTool {
         public GameObject carPoint1;
         public GameObject carPoint2;
         public GameObject carPoint3;
-        public float carXAdjustValue;
-        public float carYAdjustValue;
+        public float carStartXAdjustValue;
+        public float carStartYAdjustValue;
+        public float carStartZAdjustValue;
+        public float carLastXAdjustValue;
+        public float carLastYAdjustValue;
+        public float carLastZAdjustValue;
 
         public GameObject pogBot;
         public GameObject pogPoint0;
         public GameObject pogPoint1;
         public GameObject pogPoint2;
         public GameObject pogPoint3;
-        public float pogXAdjustValue;
-        public float pogYAdjustValue;
-        public float pogZAdjustValue;
+        public float pogStartXAdjustValue;
+        public float pogStartYAdjustValue;
+        public float pogStartZAdjustValue;
+        public float pogLastXAdjustValue;
+        public float pogLastYAdjustValue;
+        public float pogLastZAdjustValue;
 
         public bool runnerDone = false;     // var to check deeplearning done or not
 
@@ -90,16 +97,19 @@ namespace DLTool {
                     // original counter value is 5, substituted to 'speed'
                     //counter += speed;
 
-                    //car.transform.position = new Vector3(newX, newY, a[counter].z);
-
                     // new setting for the Y position, where car is situated on right side(upper line)
-                    float carNewX = a[a.Count - 1].x + carXAdjustValue;
-                    float carNewY = a[counter].y + carYAdjustValue;
+                    //float carNewX = a[a.Count - 1].x + carXAdjustValue;
+                    //carXAdjustValue = 7.5
+                    float carStartNewX = a[0].x * carStartXAdjustValue;
+                    float carLastNewX = a[a.Count - 1].x * carLastXAdjustValue;
+                    float carNewY = a[counter].y * carStartYAdjustValue;
+                    
+                    float carP0X = carLastNewX;
+                    float carP1X = carLastNewX - (carLastNewX - carStartNewX) * 1 / 3;
+                    float carP2X = carLastNewX - (carLastNewX - carStartNewX) * 2 / 3;
+                    float carP3X = carStartNewX;
 
-                    float carP0X = carNewX;
-                    float carP1X = carNewX - (carNewX - a[0].x) * 1 / 3;
-                    float carP2X = carNewX - (carNewX - a[0].x) * 2 / 3;
-                    float carP3X = a[0].x;
+                    //car.transform.position = new Vector3(carNewX, carNewY, a[counter].z);
 
                     // setting position of the car beizercarve
                     carPoint0.transform.position = new Vector3(carP0X, carNewY, a[counter].z);
@@ -116,13 +126,21 @@ namespace DLTool {
                     Debug.Log("Y length first: " + a[0].y);
                     Debug.Log("Y length last: " + a[a.Count - 1].y);
 
-                    float pogNewX = a[(a.Count - 1) / 2].x + pogXAdjustValue;
-                    float pogNewY = a[(a.Count - 1) / 2].y + pogYAdjustValue;
-                    float pogNewZ = a[(a.Count - 1) / 2].z + pogZAdjustValue;
+                    float pogStartNewX = (a[a.Count - 1].x - a[0].x) * pogStartXAdjustValue;
+                    float pogStartNewY = a[0].y * pogStartYAdjustValue;
+                    float pogStartNewZ = a[0].z * pogStartZAdjustValue;
+                    float pogLastNewX = (a[a.Count - 1].x - a[0].x) * pogLastXAdjustValue;
+                    float pogLastNewY = a[0].y * pogLastYAdjustValue;
+                    float pogLastNewZ = a[0].z * pogLastZAdjustValue;
+
+                    pogPoint0.transform.position = new Vector3(pogStartNewX, pogStartNewY, pogStartNewZ);
+                    pogPoint1.transform.position = new Vector3(pogLastNewX-(pogLastNewX-pogStartNewX)*2/3, pogLastNewY - (pogLastNewY - pogStartNewY) * 2 / 3, pogLastNewZ - (pogLastNewZ - pogStartNewZ) * 2 / 3);
+                    pogPoint2.transform.position = new Vector3(pogLastNewX - (pogLastNewX - pogStartNewX) * 1 / 3, pogLastNewY - (pogLastNewY - pogStartNewY) * 1 / 3, pogLastNewZ - (pogLastNewZ - pogStartNewZ) * 1 / 3);
+                    pogPoint3.transform.position = new Vector3(pogLastNewX, pogLastNewY, pogLastNewZ);
 
 
                     // initial pogbot position is relative to the position oof newX and Y
-                    pogBot.transform.localPosition = new Vector3(pogNewX, pogNewY, pogNewZ);
+                    //pogBot.transform.localPosition = new Vector3(pogLastNewX, pogLastNewY, pogLastNewZ);
                 }
                 else
                 {

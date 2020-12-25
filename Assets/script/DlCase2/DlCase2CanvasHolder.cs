@@ -15,6 +15,8 @@ public class DlCase2CanvasHolder : MonoBehaviour
 
     // script DlCase2BeizerCurveCar
     public GameObject newCar;
+    // script DlCase2BeizerCurvePogBot
+    public GameObject pogBot;
 
     // get info from runner
     public GameObject gameObRunner;
@@ -34,6 +36,7 @@ public class DlCase2CanvasHolder : MonoBehaviour
         if(runner.runnerDone)
         {
             newCar.GetComponent<DlCase2BeizerCurveCar>().enabled = true;
+            pogBot.GetComponent<DlCase2BeizerCurvePogBot>().enabled = true;
         }
     }
 

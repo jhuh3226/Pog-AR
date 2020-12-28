@@ -54,6 +54,14 @@ namespace DLTool {
         public Texture2D textureMap;
 
         public List<Vector3> a;
+        public List<Vector3> x;
+        public List<Vector3> y;
+
+        /**/
+        //public GameObject checkXLast;
+        //public float yDLValue;
+        //public GameObject checkYLast;
+        /**/
 
         void Start()
         {
@@ -89,8 +97,13 @@ namespace DLTool {
             {
                 runnerDone = true;      // deeplearning done
 
+
                 if (counter < a.Count)
                 {
+                    /**/
+                    //checkYLast.transform.position = new Vector3(y[y.Count - 1].x, y[y.Count - 1].y, a[counter].z);
+                    /**/
+
                     //float newX = a[counter].x - a[0].x + a[0].x + 3.0f;
                     //float newY = a[counter].y - a[0].y + a[0].y + 2.0f;
 
@@ -112,26 +125,30 @@ namespace DLTool {
                     //car.transform.position = new Vector3(carNewX, carNewY, a[counter].z);
 
                     // setting position of the car beizercarve
-                    carPoint0.transform.position = new Vector3(carP0X, carNewY, a[counter].z);
-                    carPoint1.transform.position = new Vector3(carP1X, carNewY, a[counter].z);
-                    carPoint2.transform.position = new Vector3(carP2X, carNewY, a[counter].z);
-                    carPoint3.transform.position = new Vector3(carP3X, carNewY, a[counter].z);
+                    carPoint0.transform.position = new Vector3(carP0X, carNewY, 3.0f);
+                    carPoint1.transform.position = new Vector3(carP1X, carNewY, 3.0f);
+                    carPoint2.transform.position = new Vector3(carP2X, carNewY, 3.0f);
+                    carPoint3.transform.position = new Vector3(carP3X, carNewY, 3.0f);
 
                     // console out
                     //Debug.Log("X position: " + newX);
                     //Debug.Log("Y position: " + newY);
+                    Debug.Log(a[counter].z);
 
-                    Debug.Log("X length first: " + a[0].x);
-                    Debug.Log("X length last: " + a[a.Count - 1].x);
-                    Debug.Log("Y length first: " + a[0].y);
-                    Debug.Log("Y length last: " + a[a.Count - 1].y);
+                    //Debug.Log("X length first: " + a[0].x);
+                    //Debug.Log("X length last: " + a[a.Count - 1].x);
+                    //Debug.Log("Y length first: " + a[0].y);
+                    //Debug.Log("Y length last: " + a[a.Count - 1].y);
+
+                    //Debug.Log("X length first: " + x[0].x);
+                    //Debug.Log("Y length first: " + y[0].y);
 
                     float pogStartNewX = (a[a.Count - 1].x - a[0].x) * pogStartXAdjustValue;
                     float pogStartNewY = a[0].y * pogStartYAdjustValue;
-                    float pogStartNewZ = a[0].z * pogStartZAdjustValue;
+                    float pogStartNewZ = 3.0f * pogStartZAdjustValue;
                     float pogLastNewX = (a[a.Count - 1].x - a[0].x) * pogLastXAdjustValue;
-                    float pogLastNewY = a[0].y * pogLastYAdjustValue;
-                    float pogLastNewZ = a[0].z * pogLastZAdjustValue;
+                    float pogLastNewY = a[a.Count - 1].y * pogLastYAdjustValue;
+                    float pogLastNewZ = 3.0f * pogLastZAdjustValue;
 
                     pogPoint0.transform.position = new Vector3(pogStartNewX, pogStartNewY, pogStartNewZ);
                     pogPoint1.transform.position = new Vector3(pogLastNewX-(pogLastNewX-pogStartNewX)*2/3, pogLastNewY - (pogLastNewY - pogStartNewY) * 2 / 3, pogLastNewZ - (pogLastNewZ - pogStartNewZ) * 2 / 3);
@@ -187,9 +204,11 @@ namespace DLTool {
                             // }
                             // writer.Close();
                             result = ImageTool.ScaleTexture(result, ORIGINAL_WIDTH, ORIGINAL_HEIGHT);
-                            Dictionary<int, int> line = ImageTool.GetLine(result, 'x', 0.5f);
+                            Dictionary<int, int> line = ImageTool.GetLine(result, 'x', 2.3f);
+
                             // StreamWriter writer1 = new StreamWriter("./indices.txt", true);
                             List<Vector3> WorldPoints = ImageTool.GetWorldPoints(line);
+
                             // StreamWriter writer = new StreamWriter("./test.txt", true);
 
                             // for (int i = 0; i < WorldPoints.Count; ++i)
@@ -203,6 +222,18 @@ namespace DLTool {
                             // }
                             // writer.Close();
                             this.a = WorldPoints;
+
+                            /*added*/
+                            //Dictionary<int, int> lineX = ImageTool.GetLine(result, 'x', 0.5f);
+                            //Dictionary<int, int> lineY = ImageTool.GetLine(result, 'y', yDLValue);
+
+                            //List<Vector3> WorldPointsX = ImageTool.GetWorldPoints(lineX);
+                            //List<Vector3> WorldPointsY = ImageTool.GetWorldPoints(lineY);
+
+                            //this.x = WorldPointsX;
+                            //this.y = WorldPointsY;
+                            /*-----*/
+
                             mAccessCameraImage = false;
                             isDone = true;
                         }

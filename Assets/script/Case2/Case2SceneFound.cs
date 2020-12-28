@@ -28,8 +28,8 @@ public class Case2SceneFound : MonoBehaviour
     {
         DefaultTrackableEventHandlerCase2 script = gameObContainingefaultTrackableEventHandlerCase2Script.GetComponent<DefaultTrackableEventHandlerCase2>();
 
-        if (script.targetFound == true)
-        {
+        //if (script.targetFound == true)
+        //{
 
             if (scriptTurnOnDone == false)
             {
@@ -41,15 +41,15 @@ public class Case2SceneFound : MonoBehaviour
 
                 scriptTurnOnDone = true;
             }
-        }
+        //}
     }
 
     public void turnOnScripts()
     {
-        POGCrossing.GetComponent<Case2BeizerCurvePogBot>().enabled = true;
+        //POGCrossing.GetComponent<Case2BeizerCurvePogBot>().enabled = true;
 
-        Car.GetComponent<Case2BeizerCurveCar>().enabled = true;
-        Car.GetComponent<Case2CarRotate>().enabled = true;
+        //Car.GetComponent<Case2BeizerCurveCar>().enabled = true;
+        //Car.GetComponent<Case2CarRotate>().enabled = true;
 
         eventSystem.GetComponent<Case2CanvasHolder>().enabled = true;
 

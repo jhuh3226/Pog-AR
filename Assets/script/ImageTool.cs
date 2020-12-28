@@ -114,7 +114,7 @@ namespace DLTool
       {
         int y = line[x];
 
-        res.Add(DlCase2Runner.cam.ScreenToWorldPoint(new Vector3(x, y, 10.0f)));
+        res.Add(DlCase2p3Runner.cam.ScreenToWorldPoint(new Vector3(x, y, 10.0f)));
       }
 
       return res;

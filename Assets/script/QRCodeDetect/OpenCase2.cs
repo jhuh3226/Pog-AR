@@ -7,6 +7,6 @@ public class OpenCase2 : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene("Case2");
+        SceneManager.LoadScene("DICase2.3");
     }
 }

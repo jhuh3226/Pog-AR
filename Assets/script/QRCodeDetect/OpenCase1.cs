@@ -8,6 +8,6 @@ public class OpenCase1 : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Case1");
+        SceneManager.LoadScene("RunnerTest");
     }
 }

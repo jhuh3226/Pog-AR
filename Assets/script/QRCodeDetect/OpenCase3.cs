@@ -7,6 +7,6 @@ public class OpenCase3 : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene("Case3");
+        SceneManager.LoadScene("RunnerTestBt");
     }
 }

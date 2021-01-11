@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RunnerTestBt.unity
     guid: feab3893c37d049fbb77742525c40a4c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case2-2.unity
     guid: ff4e2020f687247e3a145865bf954425
   - enabled: 0

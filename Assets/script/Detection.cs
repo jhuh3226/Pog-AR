@@ -46,10 +46,10 @@ namespace DLTool
           res[i].r = rgb;
           res[i].g = rgb;
           res[i].b = rgb;
-          res[i].a = 255;
+          //res[i].a = 255;
         }
 
-        Texture2D tex = new Texture2D(128, 160, TextureFormat.RGBA32, false);
+        Texture2D tex = new Texture2D(128, 160, TextureFormat.RGB24, false);
         tex.SetPixels32(res);
         tex.Apply(false);
         tex = FlipTexture1(tex);

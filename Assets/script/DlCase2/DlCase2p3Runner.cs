@@ -54,6 +54,7 @@ namespace DLTool
             }
             else
             {
+                // point addressing the problem
                 Debug.LogError(
                     "\nFailed to register pixel format: " + mPixelFormat.ToString() +
                     "\nThe format may be unsupported by your device." +
@@ -94,11 +95,16 @@ namespace DLTool
                     {
                         if (counter == 100)
                         {
+                            //initial codes is:
                             Texture2D texture = new Texture2D(image.Width, image.Height, TextureFormat.RGBA32, false);
+
                             image.CopyToTexture(texture);
                             texture = ImageTool.ScaleTexture(texture, IMAGE_WIDTH, IMAGE_HEIGHT);
 
+                            //initial code is:
+                            //Color32[] pixels = texture.GetPixels32();
                             Color32[] pixels = texture.GetPixels32();
+
                             Detection model = new Detection();
                             Texture2D result = model.Segmentation(pixels);
  

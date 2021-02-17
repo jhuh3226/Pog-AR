@@ -5,18 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Case1QR.unity
     guid: f8b75af6eeafa4a8bb632ef77edce3d2
   - enabled: 1
-    path: Assets/Scenes/RunnerTest.unity
-    guid: 117d4121eca5b4a0eba6d8be24ca707d
-  - enabled: 1
     path: Assets/Scenes/DICase2.3.unity
     guid: 534341fa6a0dc4c3fbd7c91e4402539b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RunnerTestBt.unity
     guid: feab3893c37d049fbb77742525c40a4c
+  - enabled: 0
+    path: Assets/Scenes/RunnerTest.unity
+    guid: 117d4121eca5b4a0eba6d8be24ca707d
   - enabled: 0
     path: Assets/Scenes/Case2-2.unity
     guid: ff4e2020f687247e3a145865bf954425
